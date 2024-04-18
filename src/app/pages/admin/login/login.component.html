@@ -1,0 +1,17 @@
+  <div class="parent-test">
+    <div class="login">
+        <h1>Login</h1>
+        <form method="post">
+            <input type="text" name="username" [(ngModel)]="loginObj.userName" placeholder="Username" required />
+            <input type="password" name="password" [(ngModel)]="loginObj.password" placeholder="Password" required />
+            <button type="button" class="btn btn-primary btn-block btn-large" (click)="onLogin()">Let me in.</button>
+        </form>
+    </div>
+</div>
+
+<!-- 
+    input type="text" name="username" [(ngModel)]="loginObj.username" placeholder="username"/>
+    <input type="password" name="password" [(ngModel)]="loginObj.password" placeholder="password"/>
+    <button type="button" (click)="onLogin()"> Login </button>
+    <p class="message">Not registered? <a href="#">Create an account</a></p>
+-->

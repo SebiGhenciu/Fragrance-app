@@ -26,6 +26,8 @@ export class ProductsComponent {
     "productImageUrl": ""
   }
 
+  //test
+
   openSidePanel() {
     this.isSidePanelVisible = true;
   }

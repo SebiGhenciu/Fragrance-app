@@ -20,7 +20,6 @@ export class LoginComponent {
   constructor(private router: Router){}
 
   onLogin() {
-    
     if(this.loginObj.userName == "admin" && this.loginObj.password == "admin"){
       this.router.navigateByUrl('/products')
     } 

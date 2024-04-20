@@ -27,5 +27,4 @@ export class LoginComponent {
       alert("wrong cred")
     }
   }
-
 }

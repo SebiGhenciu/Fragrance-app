@@ -1,5 +1,5 @@
   <div class="parent-test">
-    <div class="container" id="container">
+    <div class="container" [ngClass]="{'right-panel-active': isSignUpMode}" id="container">
         <div class="form-container sign-up-container">
           <form action="#">
             <h1>Create Account</h1>
@@ -35,31 +35,14 @@
             <div class="overlay-panel overlay-left">
               <h1>Welcome Back!</h1>
               <p>To keep connected with us please login with your personal info</p>
-              <button class="ghost" id="signIn">Sign In</button>
+              <button class="ghost" id="signIn" (click)="switchToSignIn()">Sign In</button>
             </div>
             <div class="overlay-panel overlay-right">
               <h1>Hello, Friend!</h1>
               <p>Enter your personal details and start journey with us</p>
-              <button class="ghost" id="signUp">Sign Up</button>
+              <button class="ghost" id="signUp" (click)="switchToSignUp()">Sign Up</button>
             </div>
           </div>
         </div>
       </div>
 </div>
-
-<!-- 
-    input type="text" name="username" [(ngModel)]="loginObj.username" placeholder="username"/>
-    <input type="password" name="password" [(ngModel)]="loginObj.password" placeholder="password"/>
-    <button type="button" (click)="onLogin()"> Login </button>
-    <p class="message">Not registered? <a href="#">Create an account</a></p>
-
-
-    <div class="login">
-        <h1>Login</h1>
-        <form method="post">
-            <input type="text" name="username" [(ngModel)]="loginObj.userName" placeholder="Username" required />
-            <input type="password" name="password" [(ngModel)]="loginObj.password" placeholder="Password" required />
-            <button type="button" class="btn btn-primary btn-block btn-large" (click)="onLogin()">Let me in.</button>
-        </form>
-    </div>
--->

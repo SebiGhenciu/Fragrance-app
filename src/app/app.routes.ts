@@ -2,9 +2,19 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/admin/login/login.component';
 import { LayoutComponent } from './pages/admin/layout/layout.component';
 import { ProductsComponent } from './pages/admin/products/products.component';
+import { LanguageComponent } from './pages/website/language/language.component';
 
 export const routes: Routes = [
 
+    {
+        path: '',
+        redirectTo: 'language',
+        pathMatch: 'full'
+    },
+    {
+        path: 'language',
+        component:LanguageComponent
+    },
     {
         path: '',
         redirectTo:'login',
@@ -14,6 +24,7 @@ export const routes: Routes = [
         path: 'login',
         component:LoginComponent
     },
+    /*
     {
         path: '',
         component:LayoutComponent,
@@ -24,5 +35,6 @@ export const routes: Routes = [
             }
         ]
     }
+    */
 
 ];

@@ -1,10 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scent Navbar</title>
-    <link rel="stylesheet" href="cart.component.css">
+    <link rel="stylesheet" href="benefits.component.css">
 </head>
 <body>
     <nav class="navbar">
@@ -135,8 +135,27 @@
                   </div>
                 </div>
               </li>
-              <li class="dropdown">
-                <a href="#">Decants</a>
+                <li class="dropdown">
+                  <a href="#">Decants</a>
+                  <div class="dropdown-content">
+                    <div class="dropdown-column">
+                        <h4>Women Fragrance</h4>
+                        <a href="#">Eau de parfum</a>
+                        <a href="#">Body Mist</a>
+                        <a href="#">Eau de toilette</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <h4>Popular brands</h4>
+                      <a href="#">Lancôme</a>
+                      <a href="#">NOVELLISTA</a>
+                      <a href="#">DIOR</a>
+                      <a href="#">Hugo Boss</a>
+                      <a href="#">Armani</a>
+                      <a href="#">GUERLAIN</a>
+                      <a href="#">HERMÈS</a>
+                      <a href="#">Rabanne</a>
+                  </div>
+                </div>
               </li>
                 <li class="dropdown">
                   <a href="#">Samples</a>
@@ -144,16 +163,6 @@
             </ul>
             <div class="account-cart">
                 <a href="#"><i class="fas fa-user"></i> Sebastian</a>
-                <!-- home button 
-                                    <section>
-                    <div class="example-label">Basic</div>
-                    <div class="example-button-row">
-                        <button mat-button>Basic</button>
-                        <button mat-button disabled>Disabled</button>
-                        <a mat-button href="https://www.google.com/" target="_blank">Link</a>
-                    </div>
-                    </section>
-                -->
                 <a href="#"><i class="fas fa-heart"></i> <button mat-fab extended>
                 <!-- Fav button 
                 <mat-icon>favorite</mat-icon> 
@@ -164,77 +173,33 @@
         </div>
     </nav>
 
-    <!-- Main --> 
-    <div class="main-content">
-        <div class="item">
-            <img src="path/to/image.jpg" alt="Maison Margiela REPLICA Fall / Winter Discovery Set">
-            <div class="item-content">
-                <div class="item-details">
-                    <h2>Maison Margiela REPLICA Fall / Winter Discovery Set</h2>
-                    <p>set cadou unisex</p>
-                </div>
-                <div class="item-actions">
-                    <select>
-                        <option value="1">1 buc.</option>
-                        <option value="2">2 buc.</option>
-                        <option value="3">3 buc.</option>
-                        <option value="4">4 buc.</option>
-                        <option value="5">5 buc.</option>
-                    </select>
-                    <span class="price">280 RON</span>
-                    <a href="#" class="delete-button">sterge</a>
-                </div>
+    <!-- Main Content -->
+    <section class="benefits">
+        <h1>Motive pentru a alege Scent</h1>
+        <div class="benefit">
+            <div class="text">
+                <h2>Avem aproape totul în stoc</h2>
+                <p>
+                    Suntem cel mai mare e-shop european de produse cosmetice și de parfumuri. Momentan, oferta noastră conține peste 82 de mii de produse, de la 1500 de branduri! Ne străduim să avem marea majoritate a produselor în stoc, iar coletele parfumate să vă fie expediate în aceeași zi în care le comandați. Peste o mie de angajați lucrează din greu în depozitul nostru, pentru realizarea acestor obiective!
+                </p>
+            </div>
+            <div class="image">
+                <img src="image1.png" alt="Produse cosmetice și de parfumuri">
             </div>
         </div>
-
-        <div class="item">
-            <img src="path/to/image.jpg" alt="Discovery Box Notino">
-            <div class="item-content">
-                <div class="item-details">
-                    <h2>Discovery Box Notino</h2>
-                    <p>Pachet conținând o selecție de mostre</p>
-                </div>
-                <div class="item-actions">
-                    <select>
-                        <option value="1">1 buc.</option>
-                        <option value="2">2 buc.</option>
-                        <option value="3">3 buc.</option>
-                        <option value="4">4 buc.</option>
-                        <option value="5">5 buc.</option>
-                    </select>
-                    <span class="price">32 RON</span>
-                    <a href="#" class="delete-button">sterge</a>
-                </div>
+        <div class="benefit">
+            <div class="image">
+                <img src="image2.png" alt="Magazin Scent">
+            </div>
+            <div class="text">
+                <h2>Aceleasi preturi atat in e-shop, cat si in magazine</h2>
+                <p>
+                    Vi s-a întâmplat să încercați un parfum în magazin și apoi să-l căutați on-line, pentru a-l cumpăra mai ieftin? Nu mai este cazul. La Scent garantăm aceleași prețuri excelente la e-shop, în magazinele fizice și prin aplicația de pe telefonul mobil.
+                </p>
             </div>
         </div>
+    </section>
 
-
-    <div class="options">
-        <div class="option">
-            <label><input type="checkbox"> Împachetați cadou anumite produse sau toată comanda</label>
-            <span class="option-price">26 RON</span>
-        </div>
-        <div class="option">
-            <label><input type="checkbox"> Ambalare ecologică</label>
-            <span class="option-price">5 RON</span>
-        </div>
-        <div class="option">
-            <label><input type="checkbox"> Asigurare colet</label>
-            <span class="option-price">4 RON</span>
-        </div>
-    </div>
-
-        <div class="total-price">
-            Pret total inclusiv TVA: 312 RON
-        </div>
-
-        <div class="voucher">
-            <label for="voucher">Voucher cadou sau codul de reducere</label>
-            <input type="text" id="voucher">
-            <button>OK</button>
-        </div>
-    </div>
-    
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-top">
@@ -255,7 +220,8 @@
           <div class="footer-column">
             <h4>Magazinele și punctele noastre de vânzare</h4>
             <p>   Brasov - Calea București 260 </p>
-            <p>   Bucuresti - Pierre de Coubertin nr. 7-8, sector 2 </p>
+            <p>   Cluj - Calea București 260 </p>
+            <p>   Bucuresti - Calea București 260 </p>
           </div>
           <div class="footer-column">
             <h4>De ce Scent Serenity?</h4>

@@ -1,111 +1,85 @@
-/* orders */
+/* Parfumuri */
 
 #main-content {
     display: flex;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .sidebar {
-    width: 25%;
-    padding-right: 20px;
-  }
-  
-  .user-name {
-    font-weight: bold;
-    font-size: 1.2em;
-  }
-  
-  .user-email {
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .menu {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .menu li {
-    padding: 10px 0;
-    cursor: pointer;
-  }
-  
-  .menu li:hover {
-    text-decoration: underline;
-  }
-  
-  .content {
-    width: 75%;
-  }
-  
-  .content h2 {
-    margin-top: 0;
-  }
-  
-  .order-group {
-    border-bottom: 1px solid #ddd;
-    padding: 20px 0;
-  }
-  
-  .order-date {
-    color: #666;
-    font-weight: bold;
-  }
-  
-  .product {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
+    flex-wrap: wrap;
+    padding: 20px;
   }
   
-  .product img {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
+  .perfume-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(25% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
   }
   
-  .product-details {
-    flex-grow: 1;
+  .perfume-item img {
+    max-width: 100%;
+    height: auto;
   }
   
-  .product-name {
+  .details {
+    margin-top: 15px;
+  }
+  
+  .details p {
+    margin: 5px 0;
+  }
+  
+  .brand {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  .name {
+    font-size: 1.2em;
     font-weight: bold;
   }
   
-  .product-subname {
-    font-style: italic;
-    color: #666;
+  .type,
+  .volume,
+  .price {
+    font-size: 1em;
   }
   
-  .product-type {
-    color: #666;
+  .price {
+    color: #e53935;
+    font-weight: bold;
   }
   
-  .product-price {
-    display: flex;
-    align-items: center;
+  .promotion {
+    color: #ff4081;
+    font-weight: bold;
   }
   
-  .quantity {
-    margin-right: 10px;
-  }
-  
-  .cart-btn {
-    background-color: #fff;
-    border: 1px solid #ccc;
+  .free-shipping {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #000;
+    color: #fff;
     padding: 5px 10px;
-    cursor: pointer;
+    border-radius: 5px;
     font-size: 0.9em;
   }
   
-  .cart-btn:hover {
-    border-color: #007bff;
-    color: #007bff;
+  .promotion-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4081;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
   }
+  
 
-  /* nav and footer */
+/* nav and footer */
 
 body {
     font-family: Arial, sans-serif;

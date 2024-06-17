@@ -1,10 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scent Navbar</title>
-    <link rel="stylesheet" href="cart.component.css">
+    <link rel="stylesheet" href="personal-lift.component.css">
 </head>
 <body>
     <nav class="navbar">
@@ -135,8 +135,27 @@
                   </div>
                 </div>
               </li>
-              <li class="dropdown">
-                <a href="#">Decants</a>
+                <li class="dropdown">
+                  <a href="#">Decants</a>
+                  <div class="dropdown-content">
+                    <div class="dropdown-column">
+                        <h4>Women Fragrance</h4>
+                        <a href="#">Eau de parfum</a>
+                        <a href="#">Body Mist</a>
+                        <a href="#">Eau de toilette</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <h4>Popular brands</h4>
+                      <a href="#">Lancôme</a>
+                      <a href="#">NOVELLISTA</a>
+                      <a href="#">DIOR</a>
+                      <a href="#">Hugo Boss</a>
+                      <a href="#">Armani</a>
+                      <a href="#">GUERLAIN</a>
+                      <a href="#">HERMÈS</a>
+                      <a href="#">Rabanne</a>
+                  </div>
+                </div>
               </li>
                 <li class="dropdown">
                   <a href="#">Samples</a>
@@ -144,16 +163,6 @@
             </ul>
             <div class="account-cart">
                 <a href="#"><i class="fas fa-user"></i> Sebastian</a>
-                <!-- home button 
-                                    <section>
-                    <div class="example-label">Basic</div>
-                    <div class="example-button-row">
-                        <button mat-button>Basic</button>
-                        <button mat-button disabled>Disabled</button>
-                        <a mat-button href="https://www.google.com/" target="_blank">Link</a>
-                    </div>
-                    </section>
-                -->
                 <a href="#"><i class="fas fa-heart"></i> <button mat-fab extended>
                 <!-- Fav button 
                 <mat-icon>favorite</mat-icon> 
@@ -164,77 +173,75 @@
         </div>
     </nav>
 
-    <!-- Main --> 
+    <!-- Main Content -->
     <div class="main-content">
-        <div class="item">
-            <img src="path/to/image.jpg" alt="Maison Margiela REPLICA Fall / Winter Discovery Set">
-            <div class="item-content">
-                <div class="item-details">
-                    <h2>Maison Margiela REPLICA Fall / Winter Discovery Set</h2>
-                    <p>set cadou unisex</p>
-                </div>
-                <div class="item-actions">
-                    <select>
-                        <option value="1">1 buc.</option>
-                        <option value="2">2 buc.</option>
-                        <option value="3">3 buc.</option>
-                        <option value="4">4 buc.</option>
-                        <option value="5">5 buc.</option>
-                    </select>
-                    <span class="price">280 RON</span>
-                    <a href="#" class="delete-button">sterge</a>
-                </div>
+        <h1>Ridicare Personală</h1>
+        <p>
+            Din magazinele noastre, veți putea ridica comenzile plasate online sau cumpăra parfumuri și cosmetice bestseller la aceleași prețuri ca pe site-ul nostru.
+        </p>
+        <p>
+            Puteți plăti în numerar sau cu cardul de credit direct la punctul de ridicare, de asemenea, puteți utiliza magazinele noastre și pentru testarea sau achiziționarea directă a produselor cosmetice și a parfumurilor de top.
+        </p>
+        <p>
+            Magazinele noastre nu au un depozit propriu, comanda dvs. fiind transportată direct din depozitul central din Cehia. Înainte de ridicarea comenzii, veți primi automat un SMS de confirmare când aceasta este pregătită de ridicare.
+        </p>
+        <p>
+            Termenul de livrare al comenzilor este între 2-4 zile lucrătoare de la data expedierii din depozitul central.
+        </p>
+        <div class="store-locations">
+            <div class="store">
+                <h2>Parfumerie București - Mega Mall</h2>
+                <p>(magazin + punct de ridicare)</p>
+                <p>Pierre de Coubertin nr. 7-8, sector 2, Etaj -1<br>0770898073, București, sector 2</p>
+            </div>
+            <div class="store">
+                <h2>Parfumerie Brasov</h2>
+                <p>(magazin + punct de ridicare)</p>
+                <p>Calea Bucuresti 260<br>0770898073, Brasov</p>
             </div>
         </div>
-
-        <div class="item">
-            <img src="path/to/image.jpg" alt="Discovery Box Notino">
-            <div class="item-content">
-                <div class="item-details">
-                    <h2>Discovery Box Notino</h2>
-                    <p>Pachet conținând o selecție de mostre</p>
-                </div>
-                <div class="item-actions">
-                    <select>
-                        <option value="1">1 buc.</option>
-                        <option value="2">2 buc.</option>
-                        <option value="3">3 buc.</option>
-                        <option value="4">4 buc.</option>
-                        <option value="5">5 buc.</option>
-                    </select>
-                    <span class="price">32 RON</span>
-                    <a href="#" class="delete-button">sterge</a>
-                </div>
+        <h2>Vreți să ne întrebați ceva? Scrieți-ne aici, vă rugăm.</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Numele</label>
+                <input type="text" id="name" name="name" required>
             </div>
-        </div>
-
-
-    <div class="options">
-        <div class="option">
-            <label><input type="checkbox"> Împachetați cadou anumite produse sau toată comanda</label>
-            <span class="option-price">26 RON</span>
-        </div>
-        <div class="option">
-            <label><input type="checkbox"> Ambalare ecologică</label>
-            <span class="option-price">5 RON</span>
-        </div>
-        <div class="option">
-            <label><input type="checkbox"> Asigurare colet</label>
-            <span class="option-price">4 RON</span>
-        </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Mobil/Telefon</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-method">Cum putem răspunde? <span>(optional)</span></label>
+                <select id="contact-method" name="contact-method">
+                    <option value="email">Email</option>
+                    <option value="phone">Telefon</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="order-number">Numărul comenzii <span>(optional)</span></label>
+                <input type="text" id="order-number" name="order-number">
+            </div>
+            <div class="form-group">
+                <label for="help-topic">Cu ce vă putem ajuta?</label>
+                <select id="help-topic" name="help-topic">
+                    <option value="existing-order">Întrebare despre / modificarea unei comenzi existente</option>
+                    <option value="new-order">Întrebare despre o nouă comandă</option>
+                    <option value="product-info">Întrebare despre un produs</option>
+                    <option value="other">Altele</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Te rugăm să tastezi aici întrebarea ta</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Trimite</button>
+        </form>
     </div>
 
-        <div class="total-price">
-            Pret total inclusiv TVA: 312 RON
-        </div>
-
-        <div class="voucher">
-            <label for="voucher">Voucher cadou sau codul de reducere</label>
-            <input type="text" id="voucher">
-            <button>OK</button>
-        </div>
-    </div>
-    
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-top">

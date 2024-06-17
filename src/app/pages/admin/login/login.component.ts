@@ -32,7 +32,7 @@ export class LoginComponent {
 
   onLogin() {
     if(this.loginObj.userName == "admin" && this.loginObj.password == "admin"){
-      this.router.navigateByUrl('/products')
+      this.router.navigateByUrl('/main-page.component.html')
     } 
     else{
       alert("wrong cred")

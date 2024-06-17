@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notino Navbar</title>
-    <link rel="stylesheet" href="styles2.css">
+    <title>Scent Navbar</title>
+    <link rel="stylesheet" href="main-page.component.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="#" class="logo">NOTINO</a>
+            <a [routerLink]="['/main-page']" class="logo">Scent</a>
             <div class="search-bar">
                 <input type="text" placeholder="Caută parfum, produse cosmetice brand...">
                 <button><i class="fas fa-search"></i></button>
@@ -21,7 +21,7 @@
                     <div class="dropdown-content">
                         <div class="dropdown-column">
                             <h4>Women Fragrance</h4>
-                            <a href="#">Eau de parfum</a>
+                            <a [routerLink]="['/perfume']">Eau de parfum</a>
                             <a href="#">Eau de toilette</a>
                             <a href="#">Body Mist</a>
                         </div>
@@ -137,33 +137,18 @@
               </li>
                 <li class="dropdown">
                   <a href="#">Decants</a>
-                  <div class="dropdown-content">
-                    <div class="dropdown-column">
-                        <h4>Women Fragrance</h4>
-                        <a href="#">Eau de parfum</a>
-                        <a href="#">Body Mist</a>
-                        <a href="#">Eau de toilette</a>
-                    </div>
-                    <div class="dropdown-column">
-                      <h4>Popular brands</h4>
-                      <a href="#">Lancôme</a>
-                      <a href="#">NOVELLISTA</a>
-                      <a href="#">DIOR</a>
-                      <a href="#">Hugo Boss</a>
-                      <a href="#">Armani</a>
-                      <a href="#">GUERLAIN</a>
-                      <a href="#">HERMÈS</a>
-                      <a href="#">Rabanne</a>
-                  </div>
-                </div>
-              </li>
+                </li>
                 <li class="dropdown">
                   <a href="#">Samples</a>
               </li>
             </ul>
             <div class="account-cart">
                 <a href="#"><i class="fas fa-user"></i> Sebastian</a>
-                <a href="#"><i class="fas fa-heart"></i> <span class="wishlist-count">8</span></a>
+                <a href="#"><i class="fas fa-heart"></i> <button mat-fab extended>
+                <!-- Fav button 
+                <mat-icon>favorite</mat-icon> 
+                -->             
+                </button></a>
                 <a href="#"><i class="fas fa-shopping-cart"></i> Shoping cart</a>
             </div>
         </div>
@@ -219,28 +204,29 @@
         <div class="footer-middle">
           <div class="footer-column">
             <h4>Magazinele și punctele noastre de vânzare</h4>
-            <p>   Brasov - Calea București 260</p>
+            <p>   Brasov - Calea București 260 </p>
+            <p>   Cluj - Calea București 260 </p>
+            <p>   Bucuresti - Calea București 260 </p>
           </div>
           <div class="footer-column">
-            <h4>De ce Notino?</h4>
+            <h4>De ce Scent Serenity?</h4>
             <ul>
-              <li><a href="#">Avantajele Notino</a></li>
-              <li><a href="#">Despre noi</a></li>
-              <li><a href="#">Produse de marcă originale</a></li>
-              <li><a href="#">Ridicare Personală</a></li>
-              <li><a href="#">Protecția datelor personale</a></li>
+              <li><a [routerLink]="['/benefits']">  Avantajele ScentSerenity</a></li>
+              <li><a [routerLink]="['/about-us']">  Despre noi</a></li>
+              <li><a href="#">  Produse de marcă originale</a></li>
+              <li><a [routerLink]="['/personal-lift']">  Ridicare Personală</a></li>
+              <li><a [routerLink]="['/gdpr']">  Protecția datelor personale</a></li>
             </ul>
           </div>
           <div class="footer-column">
             <h4>Link-uri importante</h4>
             <ul>
-              <li><a href="#">Recenzii produse</a></li>
-              <li><a href="#">Termeni și condiții</a></li>
-              <li><a href="#">Cum pot plăti?</a></li>
-              <li><a href="#">Metode de livrare</a></li>
-              <li><a href="#">Reclamații și plângeri</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Pentru Parteneri</a></li>
+              <li><a href="#">  Recenzii produse</a></li>
+              <li><a href="#">  Termeni și condiții</a></li>
+              <li><a href="#">  Cum pot plăti?</a></li>
+              <li><a href="#">  Metode de livrare</a></li>
+              <li><a href="#">  Reclamații și plângeri</a></li>
+              <li><a href="#">  Contact</a></li>
             </ul>
           </div>
         </div>

@@ -1,113 +1,95 @@
-/* orders */
-
-#main-content {
+.main-content {
     display: flex;
-    padding: 20px;
     font-family: Arial, sans-serif;
   }
   
   .sidebar {
-    width: 25%;
-    padding-right: 20px;
+    width: 20%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
   }
   
-  .user-name {
+  .sidebar p {
     font-weight: bold;
-    font-size: 1.2em;
   }
   
-  .user-email {
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .menu {
+  .sidebar ul {
     list-style: none;
     padding: 0;
   }
   
-  .menu li {
-    padding: 10px 0;
-    cursor: pointer;
-  }
-  
-  .menu li:hover {
-    text-decoration: underline;
-  }
-  
-  .content {
-    width: 75%;
-  }
-  
-  .content h2 {
-    margin-top: 0;
-  }
-  
-  .order-group {
-    border-bottom: 1px solid #ddd;
-    padding: 20px 0;
-  }
-  
-  .order-date {
-    color: #666;
-    font-weight: bold;
-  }
-  
-  .product {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .sidebar ul li {
     margin: 10px 0;
   }
   
-  .product img {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #000;
   }
   
-  .product-details {
-    flex-grow: 1;
-  }
-  
-  .product-name {
+  .sidebar ul li a.active {
     font-weight: bold;
+    color: #007BFF;
   }
   
-  .product-subname {
-    font-style: italic;
-    color: #666;
+  .content {
+    width: 80%;
+    padding: 20px;
   }
   
-  .product-type {
-    color: #666;
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
   
-  .product-price {
-    display: flex;
-    align-items: center;
+  h3 {
+    font-size: 18px;
+    margin-top: 20px;
   }
   
-  .quantity {
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
     margin-right: 10px;
   }
   
-  .cart-btn {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
     cursor: pointer;
-    font-size: 0.9em;
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
   }
   
-  .cart-btn:hover {
-    border-color: #007bff;
-    color: #007bff;
+  input[type="submit"]:hover {
+    background-color: #333;
   }
-
+  
+  .form-actions {
+    text-align: center;
+  }
+  
   /* nav and footer */
 
-body {
+  body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;

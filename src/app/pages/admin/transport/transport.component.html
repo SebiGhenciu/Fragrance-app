@@ -6,7 +6,8 @@
 </head>
 
 <body>
-<nav class="navbar">
+  <!-- Nav Bar -->
+  <nav class="navbar">
     <div class="navbar-container">
       <a [routerLink]="['/main-page']" class="logo">Scent Serenity</a>
       <div class="search-account-cart">
@@ -42,7 +43,7 @@
                               <a [routerLink]="['/perfume']">NOVELLISTA</a>
                               <a [routerLink]="['/perfume']">DIOR</a>
                               <a [routerLink]="['/perfume']">Versace</a>
-                              <a [routerLink]="['/perfume']">JPG</a>
+                              <a [routerLink]="['/perfume']">Jean Paul Gaultier</a>
                               <a [routerLink]="['/perfume']">Chloe</a>
                               <a [routerLink]="['/perfume']">Carolina Herrera</a>
                               <a [routerLink]="['/perfume']">Burberry</a>
@@ -64,7 +65,7 @@
                           <a [routerLink]="['/perfume']">Dior</a>
                           <a [routerLink]="['/perfume']">Versace</a>
                           <a [routerLink]="['/perfume']">Armani</a>
-                          <a [routerLink]="['/perfume']">Hermes</a>
+                          <a [routerLink]="['/perfume']">Jean Paul Gaultier</a>
                           <a [routerLink]="['/perfume']">Valentino</a>
                       </div>
                     </div>
@@ -161,10 +162,10 @@
             </li>
         </ul>
     </div>
-</nav>
+  </nav>
 
-     <!-- Main Content -->
-     <div id="main-content">
+  <!-- Main Content -->
+  <div id="main-content">
         <h1>Prețurile de transport și plată</h1>
         <p class="free-shipping">Livrare gratuită</p>
         <p class="shipping-note">la cumpărăturile minime de 250 RON până în data de 31.12.2024</p>
@@ -207,82 +208,83 @@
                 <span class="price">12 RON</span>
             </li>
         </ul>
-    </div>
+  </div>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-top">
-          <div class="footer-contact">
-            <p>0770 89 80 73</p>
-            <p>Luni-Vineri 8-16, Sambata 10-18</p>
-            <p><a href="mailto:info@ScentSerenity">info&#64;ScentSerenity.com</a></p>
-          </div>
-        <div class="footer-newsletter">
-          <p>Newsletter to e-mail</p>
-          <div class="newsletter-input">
-              <input type="email" placeholder="Email address" class="newsletter-email">
-              <!-- Alert, need to add -->
-              <button> Submit </button>
-          </div>
-        </div>
-        </div>
-        <div class="footer-middle">
-          <div class="footer-column">
-            <h2>  Magazinele și punctele noastre de vânzare</h2>
-            <p>   Brasov - Calea București 260 </p>
-            <p>   Bucuresti - Calea București 260 </p>
-          </div>
-          <div class="footer-column">
-            <h2>De ce Scent Serenity?</h2>
-            <ul>
-              <li><a [routerLink]="['/benefits']">  Avantajele ScentSerenity</a></li>
-              <li><a [routerLink]="['/about-us']">  Despre noi</a></li>
-              <li><a [routerLink]="['/original-products']">  Produse de marcă originale</a></li>
-              <li><a [routerLink]="['/personal-lift']">  Ridicare Personală</a></li>
-              <li><a [routerLink]="['/gdpr']">  Protecția datelor personale</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h2>Link-uri importante</h2>
-            <ul>
-              <!-- Alert, need to add -->
-              <li><a href="#">Termeni și condiții</a></li>
-              <!-- Pagina, need to add -->
-              <li><a href="#">Cum pot plăti?</a></li>
-              <!-- Alert, need to add -->
-              <li><a [routerLink]="['/transport']">Metode de livrare</a></li>
-              <!-- Pagina, need to add -->
-              <li><a href="#">Reclamații și plângeri</a></li>
-              <!-- Pagina, need to add -->
-              <li><a [routerLink]="['/contact']">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <div class="footer-trust">
-            <a href="https://www.trustpilot.com/"><img src="/src/app/photos/trustpilot.png" alt="Trustpilot"></a>
-            <a href="https://anpc.ro/"><img src="/src/app/photos/anpc.png" alt="ANPC"></a>
-          </div>
-          <div class="footer-app">
-            <p>Descărcați aplicația mobilă</p>
-            <a href="https://play.google.com/store/games?device=windows"><img src="/src/app/photos/googlePlay.png" alt="Google Play"></a>
-            <a href="https://www.apple.com/app-store/"><img src="/src/app/photos/apple.png" alt="App Store"></a>
-          </div>
-          <div class="footer-countries">
-            <p>
-              <a href="#">Belgium</a> | <a href="#">Deutschland</a> | <a href="#">France</a> | <a href="#">Great Britain</a> |
-              <a href="#">Österreich</a> | <a href="#">Romania</a>
-            </p>
-          </div>
-        </div>
-        <div class="footer-legal">
-          <p>© 2024 ScentSerenity, s.r.o. (SRL)</p>
-        </div>
-        <div class="footer-social">
-          <a href="#"><img src="facebook.png" alt="Facebook"></a>
-          <a href="#"><img src="instagram.png" alt="Instagram"></a>
-          <a href="#"><img src="x.png" alt="Twitter"></a>
-          <a href="#"><img src="youtube.png" alt="YouTube"></a>
-        </div>
-      </footer>
-    </body>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-contact">
+        <p>0770 89 80 73</p>
+        <p>Luni-Vineri 8-16, Sambata 10-18</p>
+        <p><a href="mailto:info@ScentSerenity">info&#64;ScentSerenity.com</a></p>
+      </div>
+    <div class="footer-newsletter">
+      <p>Newsletter to e-mail</p>
+      <div class="newsletter-input">
+          <input type="email" placeholder="Email address" class="newsletter-email">
+          <!-- Alert, need to add -->
+          <button> Submit </button>
+      </div>
+    </div>
+    </div>
+    <div class="footer-middle">
+      <div class="footer-column">
+        <h2>  Magazinele și punctele noastre de vânzare</h2>
+        <p>   Brasov - Calea București 260 </p>
+        <p>   Bucuresti - Calea București 260 </p>
+      </div>
+      <div class="footer-column">
+        <h2>De ce Scent Serenity?</h2>
+        <ul>
+          <li><a [routerLink]="['/benefits']">  Avantajele ScentSerenity</a></li>
+          <li><a [routerLink]="['/about-us']">  Despre noi</a></li>
+          <li><a [routerLink]="['/original-products']">  Produse de marcă originale</a></li>
+          <li><a [routerLink]="['/personal-lift']">  Ridicare Personală</a></li>
+          <li><a [routerLink]="['/gdpr']">  Protecția datelor personale</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h2>Link-uri importante</h2>
+        <ul>
+          <!-- Alert, need to add -->
+          <li><a href="#">Termeni și condiții</a></li>
+          <!-- Pagina, need to add -->
+          <li><a href="#">Cum pot plăti?</a></li>
+          <!-- Alert, need to add -->
+          <li><a [routerLink]="['/transport']">Metode de livrare</a></li>
+          <!-- Pagina, need to add -->
+          <li><a href="#">Reclamații și plângeri</a></li>
+          <!-- Pagina, need to add -->
+          <li><a [routerLink]="['/contact']">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-trust">
+        <a href="https://www.trustpilot.com/"><img src="/src/app/photos/trustpilot.png" alt="Trustpilot"></a>
+        <a href="https://anpc.ro/"><img src="/src/app/photos/anpc.png" alt="ANPC"></a>
+      </div>
+      <div class="footer-app">
+        <p>Descărcați aplicația mobilă</p>
+        <a href="https://play.google.com/store/games?device=windows"><img src="/src/app/photos/googlePlay.png" alt="Google Play"></a>
+        <a href="https://www.apple.com/app-store/"><img src="/src/app/photos/apple.png" alt="App Store"></a>
+      </div>
+      <div class="footer-countries">
+        <p>
+          <a href="#">Belgium</a> | <a href="#">Deutschland</a> | <a href="#">France</a> | <a href="#">Great Britain</a> |
+          <a href="#">Österreich</a> | <a href="#">Romania</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>© 2024 ScentSerenity, s.r.o. (SRL)</p>
+    </div>
+    <div class="footer-social">
+      <a href="#"><img src="facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="x.png" alt="Twitter"></a>
+      <a href="#"><img src="youtube.png" alt="YouTube"></a>
+    </div>
+  </footer>
+  
+</body>

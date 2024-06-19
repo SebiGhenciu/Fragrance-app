@@ -170,16 +170,17 @@
 .footer-bottom {
   border-top: 1px solid #444; /* Linia orizontală */
   padding-top: 20px;
-  margin-bottom: 40px; /* Spațiu între footer-bottom și țările din footer */}
+ }
 .footer-trust, .footer-app, .footer-countries {
   text-align: center;}
-.footer-trust a, .footer-app a, .footer-countries a {
+.footer-trust a, .footer-app a, a {
   margin: 0 10px;}
 .footer-app p, .footer-countries p {
   margin-bottom: 10px;}
 .footer-app img, .footer-trust img {
   max-height: 30px;}
 .footer-countries {
+  margin-bottom: -10px;;
   flex: 1 1 100%;
   border-top: 1px solid #444; /* Linia orizontală */
   padding-top: 20px; /* Spațiu adițional pentru linie */}

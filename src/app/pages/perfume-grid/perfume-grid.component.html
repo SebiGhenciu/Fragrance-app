@@ -1,5 +1,5 @@
 <div class="perfume-container">
-    @for(perfume of perfumes; track perfume.id)
+    @for(perfume of filtredPerfumes; track perfume.id)
     {
     <app-perfume-item [perfume]="perfume">
 

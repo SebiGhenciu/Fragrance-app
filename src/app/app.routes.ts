@@ -15,10 +15,13 @@ import { OrderComponent } from './pages/admin/order/order.component';
 import { SecurityComponent } from './pages/admin/security/security.component';
 import { ContactComponent } from './pages/admin/contact/contact.component';
 import { PerfumeGridComponent } from './pages/perfume-grid/perfume-grid.component';
+import { OriginalProductsComponent } from './pages/admin/original-products/original-products.component';
+import { TransportComponent } from './pages/admin/transport/transport.component';
 
 export const routes: Routes = [
 
-
+    { path: '', component: MainPageComponent, },
+    
     { path: 'language', component: LanguageComponent },
     { path: 'login', component: LoginComponent },
     { path: 'main-page', component: MainPageComponent },
@@ -33,8 +36,6 @@ export const routes: Routes = [
     { path: 'security', component: SecurityComponent, },
     { path: 'contact', component: ContactComponent, },
     { path: 'perfume', component: PerfumeGridComponent, },
-
-    { path: '', component: MainPageComponent},
-
-    { path: 'contact', component: ContactComponent, }
+    { path: 'original-products', component: OriginalProductsComponent, },
+    { path: 'transport', component: TransportComponent, },
 ];

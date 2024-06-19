@@ -1,103 +1,93 @@
-/* Main content*/
-body {
+ /* Main */ 
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;}
-.main-content {
-    width: 80%;
-    margin: 50px auto;
+    box-sizing: border-box;
+}
+
+#main-content {
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;}
-.main-content h1, .main-content h2 {
-    text-align: center;
-    color: #2c3e50;}
-.main-content p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 20px;}
-.store-locations {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.free-shipping {
+    color: #E6007E;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.shipping-note {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.shipping-options {
+    list-style: none;
+    padding: 0;
+}
+
+.shipping-options li {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;}
-.store {
-    width: 45%;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
-.store h2 {
-    margin-top: 0;}
-.contact-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;}
-.form-group {
-    flex: 1 1 calc(50% - 20px);
-    display: flex;
-    flex-direction: column;}
-.form-group label {
-    margin-bottom: 5px;
-    font-weight: bold;}
-.form-group input, .form-group select, .form-group textarea {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;}
-textarea {
-    resize: vertical;}
-button[type="submit"] {
-    padding: 10px 20px;
-    font-size: 1.1em;
-    color: #fff;
-    background-color: #3498db;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;}
-button[type="submit"]:hover {
-    background-color: #2980b9;}
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
 
+.shipping-options li span {
+    font-size: 16px;
+}
+
+.price {
+    font-weight: bold;
+}
 
 /* Navigation bar */
 .navbar {
     background-color: #000;
     color: #fff;
     padding: 10px 20px;}
-  .navbar-container {
+.navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap; /* Adăugăm wrap pentru a permite rânduri multiple */}
-  .logo {
+.logo {
     font-size: 24px;
     font-weight: bold;
     color: #fff;
     text-decoration: none;}
-  .search-account-cart {
+.search-account-cart {
     display: flex;
     align-items: center;
     flex: 1;
     justify-content: space-between;
     margin: 0 20px;}
-  .search-bar {
+.search-bar {
     flex: 1;
     display: flex;
     margin-right: 20px;}
-  .search-bar input {
+.search-bar input {
     flex: 1;
     padding: 10px;
     border: none;
     border-radius: 5px 0 0 5px;}
-  .search-bar button {
+.search-bar button {
     background-color: #fff;
     border: none;
     padding: 10px;
     border-radius: 0 5px 5px 0;}
-  .nav-links {
+.nav-links {
     list-style: none;
     display: flex;
     align-items: center;
@@ -106,16 +96,16 @@ button[type="submit"]:hover {
     flex: 1;
     justify-content: center; /* Centrăm categoriile */
     flex-wrap: wrap; /* Adăugăm wrap pentru a permite rânduri multiple */}
-  .nav-links li {
+.nav-links li {
     position: relative;}
-  .nav-links a {
+.nav-links a {
     color: #fff;
     text-decoration: none;
     padding: 10px 15px;
     display: block;}
-  .nav-links .dropdown:hover .dropdown-content {
+.nav-links .dropdown:hover .dropdown-content {
     display: flex;}
-  .dropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
@@ -126,34 +116,34 @@ button[type="submit"]:hover {
     width: 350px;
     padding: 40px;
     z-index: 1;}
-  .dropdown-column {
+.dropdown-column {
     flex: 1;
     margin: 0 10px;}
-  .dropdown-column h4 {
+.dropdown-column h4 {
     margin-top: 0;}
-  .dropdown-column a {
+.dropdown-column a {
     color: #000;
     padding: 5px 0;
     text-decoration: none;}
-  .dropdown-column a:hover {
+.dropdown-column a:hover {
     text-decoration: underline;}
-  .account-cart {
+.account-cart {
     display: flex;
     align-items: center;}
-  .account-cart a {
+.account-cart a {
     color: #fff;
     text-decoration: none;
     margin-left: 15px;
     display: flex;
     align-items: center;}
-  .account-cart .wishlist-count {
+.account-cart .wishlist-count {
     background-color: #e00034;
     border-radius: 50%;
     padding: 5px 10px;
     margin-left: 5px;}
-  .fas {
+.fas {
     margin-right: 5px;}
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .navbar-container {
         flex-direction: column;}
     .search-account-cart {
@@ -164,55 +154,55 @@ button[type="submit"]:hover {
         margin-top: 10px;}}
   
   
-/* Footer */
-  .footer {
+  /* Footer */
+.footer {
     background-color: #000;
     color: #fff;
     padding: 20px 40px;
     font-size: 14px;}
-  .footer a {
+.footer a {
     color: #fff;
     text-decoration: none;}
-  .footer-top, .footer-middle, .footer-bottom {
+.footer-top, .footer-middle, .footer-bottom {
     display: flex;
     justify-content: center; /* Centrăm elementele */
     flex-wrap: wrap;
     margin-bottom: 20px;}
-  .footer-top {
+.footer-top {
     position: relative; /* Necesită pentru linia verticală */
     margin-bottom: 40px; /* Spațiu între footer-top și footer-middle */}
-  .footer-contact, .footer-newsletter {
+.footer-contact, .footer-newsletter {
     padding: 0 20px; /* Adăugăm padding pentru spațiu */}
-  .footer-contact {
+.footer-contact {
     border-right: 1px solid #fff; /* Linia verticală */
     padding-right: 40px; /* Spațiu adițional pentru linie */}
-  .footer-newsletter {
+.footer-newsletter {
     padding-left: 40px; /* Spațiu adițional pentru linie */}
-  .footer-middle {
+.footer-middle {
     border-top: 1px solid #444; /* Linia orizontală */
     padding-top: 20px; /* Spațiu adițional pentru linie */}
-  .footer-contact p, .footer-newsletter p {
+.footer-contact p, .footer-newsletter p {
     margin: 0;}
-  .footer-contact a, .footer-newsletter a {
+.footer-contact a, .footer-newsletter a {
     display: block;
     margin-top: 5px;}
-  .footer-newsletter {
+.footer-newsletter {
     max-width: 400px;}
-  .newsletter-input {
+.newsletter-input {
     display: flex;
     margin-top: 10px;}
-  .newsletter-input input {
+.newsletter-input input {
     padding: 5px;
     border: 1px solid #444;
     border-radius: 5px;
     flex: 1;}
-  .newsletter-email {
+.newsletter-email {
     width: 300px; /* Setează lățimea dorită */
     height: 20px;
     padding: 5px; /* Adaugă padding pentru aspect */
     border: 1px solid #444; /* Adaugă bordură */
     border-radius: 5px; /* Colțuri rotunjite */}
-  .newsletter-input button {
+.newsletter-input button {
     background-color: #000;
     color: #fff;
     border: 1px solid #fff;
@@ -220,47 +210,47 @@ button[type="submit"]:hover {
     cursor: pointer;
     border-radius: 5px;
     margin-left: 5px;}
-  .footer-column {
+.footer-column {
     flex: 1 1 200px;
     margin-right: 20px;}
-  .footer-column h4 {
+.footer-column h4 {
     margin-bottom: 10px;}
-  .footer-column ul {
+.footer-column ul {
     list-style: none;
     padding: 0;
     margin: 0;}
-  .footer-column ul li {
+.footer-column ul li {
     margin-bottom: 5px;}
-  .footer-bottom {
+.footer-bottom {
     border-top: 1px solid #444; /* Linia orizontală */
     padding-top: 20px;
     margin-bottom: 40px; /* Spațiu între footer-bottom și țările din footer */}
-  .footer-trust, .footer-app, .footer-countries {
+.footer-trust, .footer-app, .footer-countries {
     text-align: center;}
-  .footer-trust a, .footer-app a, .footer-countries a {
+.footer-trust a, .footer-app a, .footer-countries a {
     margin: 0 10px;}
-  .footer-app p, .footer-countries p {
+.footer-app p, .footer-countries p {
     margin-bottom: 10px;}
-  .footer-app img, .footer-trust img {
+.footer-app img, .footer-trust img {
     max-height: 30px;}
-  .footer-countries {
+.footer-countries {
     flex: 1 1 100%;
     border-top: 1px solid #444; /* Linia orizontală */
     padding-top: 20px; /* Spațiu adițional pentru linie */}
-  .footer-countries a {
+.footer-countries a {
     display: inline-block;
     margin-bottom: 5px;}
-  .footer-legal {
+.footer-legal {
     text-align: center;
     margin-top: 20px;
     border-top: 1px solid #444;
     padding-top: 10px;}
-  .footer-social {
+.footer-social {
     text-align: center;
     margin-top: 20px;}
-  .footer-social a {
+.footer-social a {
     margin: 0 5px;}
-  .footer-social img {
+.footer-social img {
     max-height: 20px;}
-  .main-content {
+.main-content {
     padding: 20px;}

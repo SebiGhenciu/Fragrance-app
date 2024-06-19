@@ -1,161 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scent Navbar</title>
     <link rel="stylesheet" href="main-page.component.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a [routerLink]="['/main-page']" class="logo">Scent</a>
-            <div class="search-bar">
-                <input type="text" placeholder="Caută parfum, produse cosmetice brand...">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-            <ul class="nav-links">
-                <li><a [routerLink]="['/perfume']">Promotions</a></li>
-                <li class="dropdown">
-                    <a [routerLink]="['/perfume']">Women Fragrance</a>
-                    <div class="dropdown-content">
+  <!-- Nav Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a [routerLink]="['/main-page']" class="logo">Scent Serenity</a>
+      <div class="search-account-cart">
+          <div class="search-bar">
+              <input type="text" placeholder="Caută parfum, produse cosmetice brand...">
+              <button><i class="fas fa-search"></i></button>
+          </div>
+          <div class="account-cart">
+              <a [routerLink]="['/login']"><i class="fas fa-user"></i> Sebastian</a>
+              <a [routerLink]="['/favorite']"><i class="fas fa-heart"></i> Favorites </a>
+              <a [routerLink]="['/cart']"><i class="fas fa-shopping-cart"></i> Shopping cart</a>
+          </div>
+        </div>
+    </div>
+
+    <div class="navbar-container">
+        <ul class="nav-links">
+            <!-- Promotii -->
+            <li><a [routerLink]="['/perfume']">Promotii</a></li>
+            <!-- Women -->
+            <li class="dropdown">
+                      <a [routerLink]="['/perfume']">Women Fragrance</a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-column">
+                              <h4>Women Fragrance</h4>
+                              <a [routerLink]="['/perfume']">Eau de parfum</a>
+                              <a [routerLink]="['/perfume']">Eau de toilette</a>
+                              <a [routerLink]="['/perfume']">Body Mist</a>
+                            </div>
+                            <div class="dropdown-column">
+                              <h4>Popular brands</h4>
+                              <a [routerLink]="['/perfume']">Lancôme</a>
+                              <a [routerLink]="['/perfume']">NOVELLISTA</a>
+                              <a [routerLink]="['/perfume']">DIOR</a>
+                              <a [routerLink]="['/perfume']">Versace</a>
+                              <a [routerLink]="['/perfume']">JPG</a>
+                              <a [routerLink]="['/perfume']">Chloe</a>
+                              <a [routerLink]="['/perfume']">Carolina Herrera</a>
+                              <a [routerLink]="['/perfume']">Burberry</a>
+                          </div>
+                        </div>
+            </li>
+            <!-- Men -->
+            <li class="dropdown">
+                      <a [routerLink]="['/perfume']">Men Fragrance</a>
+                      <div class="dropdown-content">
                         <div class="dropdown-column">
-                            <h4>Women Fragrance</h4>
-                            <a [routerLink]="['/perfume']">Eau de parfum</a>
-                            <a [routerLink]="['/perfume']">Eau de toilette</a>
-                            <a [routerLink]="['/perfume']">Body Mist</a>
+                          <h4>Men Fragrance</h4>
+                          <a [routerLink]="['/perfume']">Eau de cologne</a>
+                          <a [routerLink]="['/perfume']">Eau de parfum</a>
+                          <a [routerLink]="['/perfume']">Eau de toilette</a>
                         </div>
                         <div class="dropdown-column">
                           <h4>Popular brands</h4>
-                          <a [routerLink]="['/perfume']">Lancôme</a>
-                          <a [routerLink]="['/perfume']">NOVELLISTA</a>
-                          <a [routerLink]="['/perfume']">DIOR</a>
-                          <a [routerLink]="['/perfume']">Hugo Boss</a>
+                          <a [routerLink]="['/perfume']">Dior</a>
+                          <a [routerLink]="['/perfume']">Versace</a>
                           <a [routerLink]="['/perfume']">Armani</a>
-                          <a [routerLink]="['/perfume']">GUERLAIN</a>
-                          <a [routerLink]="['/perfume']">HERMÈS</a>
-                          <a [routerLink]="['/perfume']">Rabanne</a>
+                          <a [routerLink]="['/perfume']">Hermes</a>
+                          <a [routerLink]="['/perfume']">Valentino</a>
                       </div>
                     </div>
-                </li>
-                <li class="dropdown">
-                  <a [routerLink]="['/perfume']">Men Fragrance</a>
+            </li>
+            <!-- Unisex -->
+            <li class="dropdown">
+                    <a [routerLink]="['/perfume']">Unisex Fragrance</a>
+                    <div class="dropdown-content">
+                      <div class="dropdown-column">
+                          <h4>Unisex Fragrance</h4>
+                          <a [routerLink]="['/perfume']">Perfume extract</a>
+                          <a [routerLink]="['/perfume']">Eau de parfum</a>
+                          <a [routerLink]="['/perfume']">Eau de toilette</a>
+                      </div>
+                      <div class="dropdown-column">
+                        <h4>Popular brands</h4>
+                        <a [routerLink]="['/perfume']">Tom Ford</a>
+                        <a [routerLink]="['/perfume']">Kilian</a>
+                        <a [routerLink]="['/perfume']">Jo Malone</a>
+                        <a [routerLink]="['/perfume']">Montale</a>
+                        <a [routerLink]="['/perfume']">Xerjoff</a>
+                    </div>
+                  </div>
+            </li>
+            <!-- Niche -->
+            <li class="dropdown">
+                  <a [routerLink]="['/perfume']">Niche Fragrance</a>
                   <div class="dropdown-content">
                     <div class="dropdown-column">
-                        <h4>Men Fragrance</h4>
-                        <a [routerLink]="['/perfume']">Eau de cologne</a>
-                        <a [routerLink]="['/perfume']">Eau de parfum</a>
-                        <a [routerLink]="['/perfume']">Eau de toilette</a>
+                        <h4>Niche Fragrance</h4>
+                        <a [routerLink]="['/perfume']">Parfum extract</a>
+                        <a [routerLink]="['/perfume']">Parfum</a>
+                        <a [routerLink]="['/perfume']">Artisan</a>
                     </div>
                     <div class="dropdown-column">
                       <h4>Popular brands</h4>
-                      <a [routerLink]="['/perfume']">Dior</a>
-                      <a [routerLink]="['/perfume']">Versace</a>
-                      <a [routerLink]="['/perfume']">Armani</a>
-                      <a [routerLink]="['/perfume']">Hermes</a>
-                      <a [routerLink]="['/perfume']">Valentino</a>
+                      <a [routerLink]="['/perfume']">Zoologist</a>
+                      <a [routerLink]="['/perfume']">DIOR</a>
+                      <a [routerLink]="['/perfume']">Jo Malone</a>
+                      <a [routerLink]="['/perfume']">Montale</a>
+                      <a [routerLink]="['/perfume']">Xerjoff</a>
                   </div>
                 </div>
-              </li>
-              <li class="dropdown">
-                <a [routerLink]="['/perfume']">Unisex Fragrance</a>
+            </li>
+            <!-- Perfume Sets -->
+            <li class="dropdown">
+                <a [routerLink]="['/perfume']">Perfumes Sets</a>
                 <div class="dropdown-content">
                   <div class="dropdown-column">
-                      <h4>Unisex Fragrance</h4>
-                      <a [routerLink]="['/perfume']">Perfume extract</a>
+                      <h4>Perfumes Sets</h4>
+                      <a [routerLink]="['/perfume']">Parfum</a>
                       <a [routerLink]="['/perfume']">Eau de parfum</a>
                       <a [routerLink]="['/perfume']">Eau de toilette</a>
                   </div>
                   <div class="dropdown-column">
                     <h4>Popular brands</h4>
-                    <a [routerLink]="['/perfume']">Tom Ford</a>
-                    <a [routerLink]="['/perfume']">Kilian</a>
-                    <a [routerLink]="['/perfume']">Jo Malone</a>
-                    <a [routerLink]="['/perfume']">Montale</a>
-                    <a [routerLink]="['/perfume']">Xerjoff</a>
+                    <a [routerLink]="['/perfume']">Versace</a>
+                    <a [routerLink]="['/perfume']">NOVELLISTA</a>
+                    <a [routerLink]="['/perfume']">DIOR</a>
+                    <a [routerLink]="['/perfume']">Hugo Boss</a>
+                    <a [routerLink]="['/perfume']">Armani</a>
+                    <a [routerLink]="['/perfume']">GUERLAIN</a>
+                    <a [routerLink]="['/perfume']">HERMÈS</a>
+                    <a [routerLink]="['/perfume']">Rabanne</a>
                 </div>
               </div>
             </li>
-            <li class="dropdown">
-              <a [routerLink]="['/perfume']">Niche Fragrance</a>
-              <div class="dropdown-content">
-                <div class="dropdown-column">
-                    <h4>Niche Fragrance</h4>
-                    <a [routerLink]="['/perfume']">Parfum extract</a>
+            <!-- Refillable -->
+             <li class="dropdown">
+                <a [routerLink]="['/perfume']">Refillable Perfumes</a>
+                <div class="dropdown-content">
+                  <div class="dropdown-column">
+                    <h4>Perfumes Sets</h4>
                     <a [routerLink]="['/perfume']">Parfum</a>
-                    <a [routerLink]="['/perfume']">Artisan</a>
-                </div>
-                <div class="dropdown-column">
-                  <h4>Popular brands</h4>
-                  <a [routerLink]="['/perfume']">Zoologist</a>
-                  <a [routerLink]="['/perfume']">DIOR</a>
-                  <a [routerLink]="['/perfume']">Jo Malone</a>
-                  <a [routerLink]="['/perfume']">Montale</a>
-                  <a [routerLink]="['/perfume']">Xerjoff</a>
-              </div>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a [routerLink]="['/perfume']">Perfumes Sets</a>
-            <div class="dropdown-content">
-              <div class="dropdown-column">
-                  <h4>Perfumes Sets</h4>
-                  <a [routerLink]="['/perfume']">Parfum</a>
-                  <a [routerLink]="['/perfume']">Eau de parfum</a>
-                  <a [routerLink]="['/perfume']">Eau de toilette</a>
-              </div>
-              <div class="dropdown-column">
-                <h4>Popular brands</h4>
-                <a [routerLink]="['/perfume']">Versace</a>
-                <a [routerLink]="['/perfume']">NOVELLISTA</a>
-                <a [routerLink]="['/perfume']">DIOR</a>
-                <a [routerLink]="['/perfume']">Hugo Boss</a>
-                <a [routerLink]="['/perfume']">Armani</a>
-                <a [routerLink]="['/perfume']">GUERLAIN</a>
-                <a [routerLink]="['/perfume']">HERMÈS</a>
-                <a [routerLink]="['/perfume']">Rabanne</a>
-            </div>
-          </div>
-          </li>
-                <li class="dropdown">
-                  <a [routerLink]="['/perfume']">Refillable Perfumes</a>
-                  <div class="dropdown-content">
-                    <div class="dropdown-column">
-                      <h4>Perfumes Sets</h4>
-                      <a [routerLink]="['/perfume']">Parfum</a>
-                      <a [routerLink]="['/perfume']">Eau de parfum</a>
-                      <a [routerLink]="['/perfume']">Eau de parfum intense</a>
-                    </div>
-                    <div class="dropdown-column">
-                      <h4>Popular brands</h4>
-                      <a [routerLink]="['/perfume']">YSL</a>
-                      <a [routerLink]="['/perfume']">Armani</a>
-                      <a [routerLink]="['/perfume']">DIOR</a>
-                      <a [routerLink]="['/perfume']">Jean Paul Gaultier</a>
+                    <a [routerLink]="['/perfume']">Eau de parfum</a>
+                    <a [routerLink]="['/perfume']">Eau de parfum intense</a>
                   </div>
+                  <div class="dropdown-column">
+                    <h4>Popular brands</h4>
+                    <a [routerLink]="['/perfume']">YSL</a>
+                    <a [routerLink]="['/perfume']">Armani</a>
+                    <a [routerLink]="['/perfume']">DIOR</a>
+                    <a [routerLink]="['/perfume']">Jean Paul Gaultier</a>
                 </div>
-              </li>
-                <li class="dropdown">
-                  <a [routerLink]="['/perfume']">Decants</a>
-                </li>
-                <li class="dropdown">
-                  <a [routerLink]="['/perfume']">Samples</a>
-              </li>
-            </ul>
-            <div class="account-cart">
-                <a [routerLink]="['/login']"><i class="fas fa-user"></i> Sebastian</a>
-                <a [routerLink]="['/favorite']"><i class="fas fa-heart"></i> <button mat-fab extended>
-                <!-- Fav button 
-                <mat-icon>favorite</mat-icon> 
-                -->             
-                </button></a>
-                <a [routerLink]="['/cart']"><i class="fas fa-shopping-cart"></i> Shoping cart</a>
-            </div>
-        </div>
-    </nav>
+              </div>
+            </li>
+            <!-- Decants -->
+            <li class="dropdown">
+              <a [routerLink]="['/perfume']">Decants</a>
+            </li>
+            <!-- Samples -->
+            <li class="dropdown">
+                <a [routerLink]="['/perfume']">Samples</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
 
-     <!-- Main Content -->
-     <div class="main-content">
+  <!-- Main Content -->
+  <div class="main-content">
         <!-- Carousel -->
         <div class="carousel">
             <div class="carousel-item active">
@@ -183,29 +193,29 @@
                 <img src="brand3.jpg" alt="Brand 3">
             </div>
         </div>
-    </div>
+  </div>
 
-      <!-- Footer -->
-      <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer">
         <div class="footer-top">
           <div class="footer-contact">
             <p>0770 89 80 73</p>
             <p>Luni-Vineri 8-16, Sambata 10-18</p>
             <p><a href="mailto:info@ScentSerenity">info&#64;ScentSerenity.com</a></p>
           </div>
-          <div class="footer-newsletter">
-            <p>Newsletter to e-mail</p>
-            <div class="newsletter-input">
-              <input type="email" placeholder="Email address">
+        <div class="footer-newsletter">
+          <p>Newsletter to e-mail</p>
+          <div class="newsletter-input">
+              <input type="email" placeholder="Email address" class="newsletter-email">
+              <!-- Alert, need to add -->
               <button> Submit </button>
-            </div>
           </div>
+        </div>
         </div>
         <div class="footer-middle">
           <div class="footer-column">
-            <h2>Magazinele și punctele noastre de vânzare</h2>
+            <h2>  Magazinele și punctele noastre de vânzare</h2>
             <p>   Brasov - Calea București 260 </p>
-            <p>   Cluj - Calea București 260 </p>
             <p>   Bucuresti - Calea București 260 </p>
           </div>
           <div class="footer-column">
@@ -213,7 +223,7 @@
             <ul>
               <li><a [routerLink]="['/benefits']">  Avantajele ScentSerenity</a></li>
               <li><a [routerLink]="['/about-us']">  Despre noi</a></li>
-              <li><a href="#">  Produse de marcă originale</a></li>
+              <li><a [routerLink]="['/original-products']">  Produse de marcă originale</a></li>
               <li><a [routerLink]="['/personal-lift']">  Ridicare Personală</a></li>
               <li><a [routerLink]="['/gdpr']">  Protecția datelor personale</a></li>
             </ul>
@@ -221,24 +231,28 @@
           <div class="footer-column">
             <h2>Link-uri importante</h2>
             <ul>
-              <li><a href="#">Recenzii produse</a></li>
+              <!-- Alert, need to add -->
               <li><a href="#">Termeni și condiții</a></li>
+              <!-- Pagina, need to add -->
               <li><a href="#">Cum pot plăti?</a></li>
-              <li><a href="#">Metode de livrare</a></li>
+              <!-- Alert, need to add -->
+              <li><a [routerLink]="['/transport']">Metode de livrare</a></li>
+              <!-- Pagina, need to add -->
               <li><a href="#">Reclamații și plângeri</a></li>
-              <li><a href="#">Contact</a></li>
+              <!-- Pagina, need to add -->
+              <li><a [routerLink]="['/contact']">Contact</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
           <div class="footer-trust">
-            <a href="https://www.trustpilot.com/"><img src="./trustpilot.png" alt="Trustpilot"></a>
-            <a href="https://anpc.ro/"><img src="./anpc.png" alt="ANPC"></a>
+            <a href="https://www.trustpilot.com/"><img src="/src/app/photos/trustpilot.png" alt="Trustpilot"></a>
+            <a href="https://anpc.ro/"><img src="/src/app/photos/anpc.png" alt="ANPC"></a>
           </div>
           <div class="footer-app">
             <p>Descărcați aplicația mobilă</p>
-            <a href="https://play.google.com/store/games?device=windows"><img src="googlePlay.png" alt="Google Play"></a>
-            <a href="https://www.apple.com/app-store/"><img src="apple.png" alt="App Store"></a>
+            <a href="https://play.google.com/store/games?device=windows"><img src="/src/app/photos/googlePlay.png" alt="Google Play"></a>
+            <a href="https://www.apple.com/app-store/"><img src="/src/app/photos/apple.png" alt="App Store"></a>
           </div>
           <div class="footer-countries">
             <p>
@@ -256,6 +270,6 @@
           <a href="#"><img src="x.png" alt="Twitter"></a>
           <a href="#"><img src="youtube.png" alt="YouTube"></a>
         </div>
-      </footer>
-    </body>
-</html>
+  </footer>
+
+</body>

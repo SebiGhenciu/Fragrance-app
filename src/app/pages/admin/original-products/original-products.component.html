@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scent Navbar</title>
+    <link rel="stylesheet" href="original-products.component.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a [routerLink]="['/main-page']" class="logo">Scent Serenity</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Caută parfum, produse cosmetice brand...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="nav-links">
+                <li><a [routerLink]="['/perfume']">Promotions</a></li>
+                <li class="dropdown">
+                    <a [routerLink]="['/perfume']">Women Fragrance</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-column">
+                            <h4>Women Fragrance</h4>
+                            <a [routerLink]="['/perfume']">Eau de parfum</a>
+                            <a [routerLink]="['/perfume']">Eau de toilette</a>
+                            <a [routerLink]="['/perfume']">Body Mist</a>
+                        </div>
+                        <div class="dropdown-column">
+                          <h4>Popular brands</h4>
+                          <a [routerLink]="['/perfume']">Lancôme</a>
+                          <a [routerLink]="['/perfume']">NOVELLISTA</a>
+                          <a [routerLink]="['/perfume']">DIOR</a>
+                          <a [routerLink]="['/perfume']">Hugo Boss</a>
+                          <a [routerLink]="['/perfume']">Armani</a>
+                          <a [routerLink]="['/perfume']">GUERLAIN</a>
+                          <a [routerLink]="['/perfume']">HERMÈS</a>
+                          <a [routerLink]="['/perfume']">Rabanne</a>
+                      </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                  <a [routerLink]="['/perfume']">Men Fragrance</a>
+                  <div class="dropdown-content">
+                    <div class="dropdown-column">
+                        <h4>Men Fragrance</h4>
+                        <a [routerLink]="['/perfume']">Eau de cologne</a>
+                        <a [routerLink]="['/perfume']">Eau de parfum</a>
+                        <a [routerLink]="['/perfume']">Eau de toilette</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <h4>Popular brands</h4>
+                      <a [routerLink]="['/perfume']">Dior</a>
+                      <a [routerLink]="['/perfume']">Versace</a>
+                      <a [routerLink]="['/perfume']">Armani</a>
+                      <a [routerLink]="['/perfume']">Hermes</a>
+                      <a [routerLink]="['/perfume']">Valentino</a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a [routerLink]="['/perfume']">Unisex Fragrance</a>
+                <div class="dropdown-content">
+                  <div class="dropdown-column">
+                      <h4>Unisex Fragrance</h4>
+                      <a [routerLink]="['/perfume']">Perfume extract</a>
+                      <a [routerLink]="['/perfume']">Eau de parfum</a>
+                      <a [routerLink]="['/perfume']">Eau de toilette</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Popular brands</h4>
+                    <a [routerLink]="['/perfume']">Tom Ford</a>
+                    <a [routerLink]="['/perfume']">Kilian</a>
+                    <a [routerLink]="['/perfume']">Jo Malone</a>
+                    <a [routerLink]="['/perfume']">Montale</a>
+                    <a [routerLink]="['/perfume']">Xerjoff</a>
+                </div>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a [routerLink]="['/perfume']">Niche Fragrance</a>
+              <div class="dropdown-content">
+                <div class="dropdown-column">
+                    <h4>Niche Fragrance</h4>
+                    <a [routerLink]="['/perfume']">Parfum extract</a>
+                    <a [routerLink]="['/perfume']">Parfum</a>
+                    <a [routerLink]="['/perfume']">Artisan</a>
+                </div>
+                <div class="dropdown-column">
+                  <h4>Popular brands</h4>
+                  <a [routerLink]="['/perfume']">Zoologist</a>
+                  <a [routerLink]="['/perfume']">DIOR</a>
+                  <a [routerLink]="['/perfume']">Jo Malone</a>
+                  <a [routerLink]="['/perfume']">Montale</a>
+                  <a [routerLink]="['/perfume']">Xerjoff</a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a [routerLink]="['/perfume']">Perfumes Sets</a>
+            <div class="dropdown-content">
+              <div class="dropdown-column">
+                  <h4>Perfumes Sets</h4>
+                  <a [routerLink]="['/perfume']">Parfum</a>
+                  <a [routerLink]="['/perfume']">Eau de parfum</a>
+                  <a [routerLink]="['/perfume']">Eau de toilette</a>
+              </div>
+              <div class="dropdown-column">
+                <h4>Popular brands</h4>
+                <a [routerLink]="['/perfume']">Versace</a>
+                <a [routerLink]="['/perfume']">NOVELLISTA</a>
+                <a [routerLink]="['/perfume']">DIOR</a>
+                <a [routerLink]="['/perfume']">Hugo Boss</a>
+                <a [routerLink]="['/perfume']">Armani</a>
+                <a [routerLink]="['/perfume']">GUERLAIN</a>
+                <a [routerLink]="['/perfume']">HERMÈS</a>
+                <a [routerLink]="['/perfume']">Rabanne</a>
+            </div>
+          </div>
+          </li>
+                <li class="dropdown">
+                  <a [routerLink]="['/perfume']">Refillable Perfumes</a>
+                  <div class="dropdown-content">
+                    <div class="dropdown-column">
+                      <h4>Perfumes Sets</h4>
+                      <a [routerLink]="['/perfume']">Parfum</a>
+                      <a [routerLink]="['/perfume']">Eau de parfum</a>
+                      <a [routerLink]="['/perfume']">Eau de parfum intense</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <h4>Popular brands</h4>
+                      <a [routerLink]="['/perfume']">YSL</a>
+                      <a [routerLink]="['/perfume']">Armani</a>
+                      <a [routerLink]="['/perfume']">DIOR</a>
+                      <a [routerLink]="['/perfume']">Jean Paul Gaultier</a>
+                  </div>
+                </div>
+              </li>
+                <li class="dropdown">
+                  <a [routerLink]="['/perfume']">Decants</a>
+                </li>
+                <li class="dropdown">
+                  <a [routerLink]="['/perfume']">Samples</a>
+              </li>
+            </ul>
+            <div class="account-cart">
+                <a [routerLink]="['/login']"><i class="fas fa-user"></i> Sebastian</a>
+                <a [routerLink]="['/favorite']"><i class="fas fa-heart"></i> <button mat-fab extended>
+                <!-- Fav button 
+                <mat-icon>favorite</mat-icon> 
+                -->             
+                </button></a>
+                <a [routerLink]="['/cart']"><i class="fas fa-shopping-cart"></i> Shoping cart</a>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Main Content -->
+    <div class="main">
+        <h1>Produse de marcă originale</h1>
+        <div class="image-container">
+          <img src="path-to-your-image/image.png" alt="Produse Originale">
+        </div>
+        <div class="content">
+          <p>   Toate produsele comercializate de noi, provin numai de la distribuitori autorizați. Acest lucru ne permite să avem acces la produse originale, de cea mai bună calitate. Parfumurile disponibile în magazinul nostru, provin de la aceeași distribuitori de la care se aprovizionează și magazinele fizice pe care le puteți vizita personal.</p>
+          <p>Existăm pe această piață încă din anul 2004 și am deservit zeci de mii de clienți până acum. Ne-am aprovizionat numai cu produse originale încă de la început. Orice altă practică ar fi împotriva codurilor noastre de etică. Longevitatea companiei noastre și dezvoltarea continuă, a fost posibilă doar prin prisma calității serviciilor și produselor oferite de noi. Suntem o companie prezentă și respectată în 24 de state Europene.</p>
+          <p>Avem toate certificările de garanție a calității, cât și acorduri ferme cu instituțiile statului și producătorii, drept urmare clienții noștri pot beneficia de confortul unei alegeri sigure întotdeauna.</p>
+          <p>Ca o garanție suplimentară a calității produselor noastre putem furniza, de asemenea, recomandările partenerilor noștri. Produsele noastre sunt cerute de către parteneri de încredere, la fel de preocupați de calitate și autenticitate.</p>
+          <p>Fiind printre primii din clasament în acest domeniu, am devenit membri ai Asociaţiei Pentru Comerţul Electronic (APEK). Această organizaţie, care este implicată în dezvoltarea comerţului electronic în Cehia, emite un certificat acordat numai pentru comercianţii care îndeplinesc criterii foarte stricte. Iar acest certificat rămâne valabil doar pentru companiile care respectă continuu aceste criterii stricte de calitate şi originalitate.</p>
+          <p>Fiecare aplicaţie e-commerce este supusă unui audit aprofundat, care implică efectuarea de achiziții anonime şi examinează independent calitatea produselor furnizate.</p>
+          <p>Din 2006, am primit certificatul SAOP acordat de Oficiul pentru Protecţia Consumatorilor din Cehia. În anul 2008 am primit şi un certificat de non-discriminare, acordat de Oficiul pentru Protecţia Consumatorilor.</p>
+          <p>Aceasta este o întrebare foarte frecventă şi legitimă în esenţă, având în vedere că preţurile noastre sunt cu adevarat foarte accesibile (surprinzător de mici). Produsele noastre sunt în unele cazuri cu până la 70% mai mici decât cele practicate de magazinele fizice locale, în condiţiile în care avem aceiaşi furnizori.</p>
+          <p></p>
+        </div>
+    </div>
+      
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-contact">
+            <p>0770 89 80 73</p>
+            <p>Luni-Vineri 8-16, Sambata 10-18</p>
+            <p><a href="mailto:info@ScentSerenity">info&#64;ScentSerenity.com</a></p>
+          </div>
+          <div class="footer-newsletter">
+            <p>Newsletter to e-mail</p>
+            <div class="newsletter-input">
+              <input type="email" placeholder="Email address">
+              <button> Submit </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-middle">
+          <div class="footer-column">
+            <h2>Magazinele și punctele noastre de vânzare</h2>
+            <p>   Brasov - Calea București 260 </p>
+            <p>   Cluj - Calea București 260 </p>
+            <p>   Bucuresti - Calea București 260 </p>
+          </div>
+          <div class="footer-column">
+            <h2>De ce Scent Serenity?</h2>
+            <ul>
+              <li><a [routerLink]="['/benefits']">  Avantajele ScentSerenity</a></li>
+              <li><a [routerLink]="['/about-us']">  Despre noi</a></li>
+              <li><a [routerLink]="['/original-products']">  Produse de marcă originale</a></li>
+              <li><a [routerLink]="['/personal-lift']">  Ridicare Personală</a></li>
+              <li><a [routerLink]="['/gdpr']">  Protecția datelor personale</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h2>Link-uri importante</h2>
+            <ul>
+              <li><a href="#">Recenzii produse</a></li>
+              <li><a href="#">Termeni și condiții</a></li>
+              <li><a href="#">Cum pot plăti?</a></li>
+              <li><a href="#">Metode de livrare</a></li>
+              <li><a href="#">Reclamații și plângeri</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-trust">
+            <a href="https://www.trustpilot.com/"><img src="./trustpilot.png" alt="Trustpilot"></a>
+            <a href="https://anpc.ro/"><img src="./anpc.png" alt="ANPC"></a>
+          </div>
+          <div class="footer-app">
+            <p>Descărcați aplicația mobilă</p>
+            <a href="https://play.google.com/store/games?device=windows"><img src="googlePlay.png" alt="Google Play"></a>
+            <a href="https://www.apple.com/app-store/"><img src="apple.png" alt="App Store"></a>
+          </div>
+          <div class="footer-countries">
+            <p>
+              <a href="#">Belgium</a> | <a href="#">Deutschland</a> | <a href="#">France</a> | <a href="#">Great Britain</a> |
+              <a href="#">Österreich</a> | <a href="#">Romania</a>
+            </p>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>© 2024 ScentSerenity, s.r.o. (SRL)</p>
+        </div>
+        <div class="footer-social">
+          <a href="#"><img src="facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="x.png" alt="Twitter"></a>
+          <a href="#"><img src="youtube.png" alt="YouTube"></a>
+        </div>
+      </footer>
+    </body>
+</html>

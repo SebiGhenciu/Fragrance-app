@@ -168,13 +168,6 @@ button,input,optgroup,select,textarea {
     line-height: inherit
 }
 
-[type=button],[type=reset],[type=submit],button {
-    -webkit-appearance: button
-}
-
-input[type=date],input[type=time],input[type=datetime-local],input[type=month] {
-    -webkit-appearance: listbox
-}
 
 textarea {
     overflow: auto;
@@ -235,10 +228,6 @@ textarea {
     height: auto
 }
 
-[type=search] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px
-}
 
 [type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration {
     -webkit-appearance: none
@@ -477,41 +466,6 @@ template {
     .modal-lg {
         max-width:800px
     }
-}
-
-@font-face {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap
-}
-
-@font-face {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap
-}
-
-@font-face {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap
-}
-
-@font-face {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap
 }
 
 html {

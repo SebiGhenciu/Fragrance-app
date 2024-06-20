@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from "@angular/core";
 import { RouterLink } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -15,6 +15,7 @@ import { PerfumeType } from '../../../enums/perfume-type.enum';
 })
 export class MainPageComponent {
 
+  /* @Input() slides; */
 
   get Sex() {
     return Sex;

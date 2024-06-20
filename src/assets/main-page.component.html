@@ -1,3 +1,11 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scent Navbar</title>
+  <link rel="stylesheet" href="main-page.component.css">
+</head>
+
+<body>
   <!-- Nav Bar -->
   <nav class="navbar">
     <div class="navbar-container">
@@ -5,12 +13,14 @@
       <div class="search-account-cart">
         <div class="search-bar">
           <input type="text" placeholder="Search a fragrance..">
-          <button><mat-icon>search</mat-icon></button>
+          <button><i class="fas fa-search"></i></button>
         </div>
         <div class="account-cart">
           <a [routerLink]="['/login']"><i class="fas fa-user"></i> Sebastian</a>
           <a [routerLink]="['/favorite']"><i class="fas fa-heart"></i> Favorites </a>
-          <a [routerLink]="['/cart']"><i class="fas fa-shopping-cart"></i> Shopping cart</a>
+          <div class="example-button-row"><button mat-flat-button>Shopping cart</button></div>
+          <!-- <a [routerLink]="['/cart']"><i class="fas fa-shopping-cart"></i> Shopping cart</a> -->
+          <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
         </div>
       </div>
     </div>
@@ -156,51 +166,36 @@
     </div>
   </nav>
 
-<!-- Main Items -->
-<div class="main-content">
-    <div class="products">
-      <div class="breadcrumb">
-        <span>Perfumes</span>
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Carousel -->
+    <div class="carousel">
+      <div class="carousel-item active">
+        <img src="/assets/brand1.png" alt="Image 1">
+        <div class="carousel-caption">Solicitați gratuit diagnosticarea tenului online</div>
       </div>
-      <h1>Eau de Parfum for men</h1>
-      <div class="product-grid">
-        <div class="perfume-container">
-          @for(perfume of filtredPerfumes; track perfume.id)
-          {
-          <app-perfume-item [perfume]="perfume">
-          </app-perfume-item>
-          }
-        </div>
+      <div class="carousel-item">
+        <img src="/assets/brand2.png" alt="Image 2">
+        <div class="carousel-caption">Shopping Weeks</div>
       </div>
+      <div class="carousel-item">
+        <img src="/assets/brand3.png" alt="Image 3">
+        <div class="carousel-caption">Descopera Terre d'Hermes</div>
+      </div>
+      <a class="carousel-prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="carousel-next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-  
-    <!-- Side Bar -->
-    <div class="sidebar">
-      <h3>Parfumuri pentru bărbați</h3>
-      <ul>
-        <li>Apă de toaletă</li>
-        <li class="active">Apă de parfum</li>
-        <li>Parfumuri</li>
-        <li>Apă de colonie</li>
-        <li>Spray-uri de corp</li>
-        <li>Eaux Fraîches</li>
-        <li>Uleiuri parfumate</li>
-      </ul>
-      <h4>Interval de prețuri</h4>
-      <input type="text" placeholder="30 RON"> - <input type="text" placeholder="8.130 RON">
-      <h4>Mărimea reducerii</h4>
-      <ul>
-        <li><input type="checkbox"> Reducere de 30 % (6)</li>
-        <li><input type="checkbox"> Reducere de 20 % (83)</li>
-        <li><input type="checkbox"> Reducere de 15 % (131)</li>
-        <li><input type="checkbox"> Reducere de 10 % (1128)</li>
-      </ul>
-      <h4>Brand</h4>
-      <!-- Additional filters can be added here -->
+
+    <!-- Panel -->
+    <div class="panel">
+      <h2>Magazine fizice</h2>
+      <div class="brands">
+        <img src="brand1.jpg" alt="Brand 1">
+        <img src="brand2.jpg" alt="Brand 2">
+        <img src="brand3.jpg" alt="Brand 3">
+      </div>
     </div>
   </div>
-
-  
 
   <!-- Footer -->
   <footer class="footer">
@@ -279,3 +274,5 @@
       <a href="#"><img src="/assets/youtube.png" alt="YouTube"></a>
     </div>
   </footer>
+
+</body>

@@ -186,22 +186,22 @@
       <a class="carousel-next" onclick="plusSlides(1)">&#10095;</a>
     </div>-->
 
-    <!-- carousel -->
-    <div class="carousel">
-  <ng-container *ngFor="let slide of slides; let i = index">
-    <img
-      [src]="slide.src"
-      class="slide"
-    />
-  </ng-container>
+  <!-- carousel -->
+  <div class="carousel">
+    <ng-container *ngFor="let slide of slides; let i = index">
+      <img
+        [src]="slide.src"
+        class="slide"
+      />
+    </ng-container>
 
-  <!-- controls -->
-  <button class="control prev">
-    <span class="arrow left"></span>
-  </button>
-  <button class="control next">
-    <span class="arrow right"></span>
-  </button>
+    <!-- controls -->
+    <button class="control prev">
+      <span class="arrow left"></span>
+    </button>
+    <button class="control next">
+      <span class="arrow right"></span>
+    </button>
     </div>
 
     <!-- Panel -->
@@ -215,7 +215,6 @@
   
   </div>
   
-
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-top">
@@ -233,12 +232,15 @@
         </div>
       </div>
     </div>
+
     <div class="footer-middle">
+
       <div class="footer-column">
         <h2> Magazinele și punctele noastre de vânzare</h2>
         <p> Brasov - Calea București 260 </p>
         <p> Bucuresti - Calea București 260 </p>
       </div>
+
       <div class="footer-column">
         <h2>De ce Scent Serenity?</h2>
         <ul>
@@ -249,32 +251,32 @@
           <li><a [routerLink]="['/gdpr']"> Protecția datelor personale</a></li>
         </ul>
       </div>
+
       <div class="footer-column">
         <h2>Link-uri importante</h2>
         <ul>
-          <!-- Alert, need to add -->
           <li><a href="#">Termeni și condiții</a></li>
-          <!-- Pagina, need to add -->
           <li><a href="#">Cum pot plăti?</a></li>
-          <!-- Alert, need to add -->
           <li><a [routerLink]="['/transport']">Metode de livrare</a></li>
-          <!-- Pagina, need to add -->
           <li><a href="#">Reclamații și plângeri</a></li>
-          <!-- Pagina, need to add -->
           <li><a [routerLink]="['/contact']">Contact</a></li>
         </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
+
       <div class="footer-trust">
         <a href="https://www.trustpilot.com/"><img src="/assets/trustpilot.png" alt="Trustpilot"></a>
         <a href="https://anpc.ro/"><img src="/assets/anpc.png" alt="ANPC"></a>
       </div>
+
       <div class="footer-app">
         <p>Descărcați aplicația mobilă</p>
         <a href="https://play.google.com/store/games?device=windows"><img src="/assets/googlePlay.png" alt="Google Play"></a>
         <a href="https://www.apple.com/app-store/"><img src="/assets/apple.png" alt="App Store"></a>
       </div>
+
       <div class="footer-countries">
         <p>
           <a href="#">Belgium</a> | <a href="#">Deutschland</a> | <a href="#">France</a> | <a href="#">Great Britain</a>
@@ -282,7 +284,9 @@
           <a href="#">Österreich</a> | <a href="#">Romania</a>
         </p>
       </div>
+
     </div>
+
     <div class="footer-legal">
       <p>© 2024 ScentSerenity, s.r.o. (SRL)</p>
     </div>
@@ -292,6 +296,7 @@
       <a href="#"><img src="/assets/x.png" alt="Twitter"></a>
       <a href="#"><img src="/assets/youtube.png" alt="YouTube"></a>
     </div>
+
   </footer>
 
 </body>

@@ -7,6 +7,7 @@ import { PerfumeType } from '../../enums/perfume-type.enum';
 import { Perfume } from '../../models/perfume.model';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+/* import { Notes } from '../../enums/notes.enum'; */
 
 @Component({
   selector: 'app-perfume-grid',

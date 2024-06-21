@@ -162,41 +162,59 @@
       <div class="breadcrumb">
         <span>Perfumes</span>
       </div>
-      <h1>Eau de Parfum for men</h1>
+      <h1>Type of the parfume</h1> <!-- {{perfume.type}} //-->
+
       <div class="product-grid">
         <div class="perfume-container">
           @for(perfume of filtredPerfumes; track perfume.id)
           {
           <app-perfume-item [perfume]="perfume">
+      
           </app-perfume-item>
           }
+
         </div>
       </div>
+      
     </div>
   
     <!-- Side Bar -->
     <div class="sidebar">
-      <h3>Parfumuri pentru bărbați</h3>
+      <h3>Type of the perfume</h3>
       <ul>
-        <li>Apă de toaletă</li>
-        <li class="active">Apă de parfum</li>
-        <li>Parfumuri</li>
-        <li>Apă de colonie</li>
-        <li>Spray-uri de corp</li>
-        <li>Eaux Fraîches</li>
-        <li>Uleiuri parfumate</li>
+        <li>Artisan</li>
+        <li class="active">Extract</li>
+        <li>Perfume</li>
+        <li>Intense</li>
+        <li>Eau de Parfum</li>
+        <li>Eau de Toilette</li>
+        <li>Eau de Cologne</li>
+        <li>Body Set</li>
       </ul>
-      <h4>Interval de prețuri</h4>
-      <input type="text" placeholder="30 RON"> - <input type="text" placeholder="8.130 RON">
-      <h4>Mărimea reducerii</h4>
+      <br>
+      <h4>Price range</h4>
+      <input type="text" placeholder="50 RON"> - <input type="text" placeholder="2000 RON">
+
+      <br><br>
+
+      <h4>Perfume type</h4>
       <ul>
-        <li><input type="checkbox"> Reducere de 30 % (6)</li>
-        <li><input type="checkbox"> Reducere de 20 % (83)</li>
-        <li><input type="checkbox"> Reducere de 15 % (131)</li>
-        <li><input type="checkbox"> Reducere de 10 % (1128)</li>
+        <li><input type="checkbox"> Woody</li>
+        <li><input type="checkbox"> Floral</li>
+        <li><input type="checkbox"> Fruity</li>
+        <li><input type="checkbox"> Marine</li>
+        <li><input type="checkbox"> Green</li>
       </ul>
-      <h4>Brand</h4>
-      <!-- Additional filters can be added here -->
+
+      <br>
+
+      <h4>Gender</h4>
+      <ul>
+        <li><input type="checkbox"> Masculine</li>
+        <li><input type="checkbox"> Feminine</li>
+        <li><input type="checkbox"> Unisex</li>
+
+      </ul>
     </div>
   </div>
 

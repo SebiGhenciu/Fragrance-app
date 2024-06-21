@@ -6,5 +6,5 @@ export enum PerfumeType {
     EDP,
     EDT,
     EDC,
-    BM
+    BM,
 }

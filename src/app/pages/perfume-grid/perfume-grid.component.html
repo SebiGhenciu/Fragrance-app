@@ -1,299 +1,56 @@
-  <!-- Nav Bar -->
-  <nav class="navbar">
-    <div class="navbar-container">
-      <a [routerLink]="['/main-page']" class="logo">Scent Serenity</a>
-      <div class="search-account-cart">
-        <div class="search-bar">
-          <input type="text" placeholder="Search a fragrance..">
-          <button><mat-icon>search</mat-icon></button>
-        </div>
-        <div class="account-cart">
-          <a [routerLink]="['/login']"><i class="fas fa-user"></i> Sebastian</a>
-          <a [routerLink]="['/favorite']"><i class="fas fa-heart"></i> Favorites </a>
-          <a [routerLink]="['/cart']"><i class="fas fa-shopping-cart"></i> Shopping cart</a>
-        </div>
+<div class="main-content">
+  <div class="products">
+    <div class="breadcrumb">
+      <span>Perfumes</span>
+    </div>
+    <h1>Type of the parfume</h1>
+    <!-- {{perfume.type}} //-->
+
+    <div class="product-grid">
+      <div class="perfume-container">
+        @for(perfume of filtredPerfumes; track perfume.id) {
+        <app-perfume-item [perfume]="perfume"> </app-perfume-item>
+        }
       </div>
-    </div>
-
-    <div class="navbar-container">
-      <ul class="nav-links">
-        <!-- Promotii -->
-        <li><a [routerLink]="['/perfume']">Promotions</a></li>
-        <!-- Women -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Feminine]">Women Fragrance</a>
-          <div class="dropdown-content">
-            <div class="dropdown-column">
-              <h4>Women Fragrance</h4>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDP]">Eau de parfum</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDT]">Eau de toilette</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.Extract]">Body Mist</a>
-            </div>
-            <div class="dropdown-column">
-              <h4>Popular brands</h4>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDP]">Lancôme</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDP]">NOVELLISTA</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDP]">DIOR</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDP]">Versace</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDP]">Jean Paul Gaultier</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDP]">Chloe</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDP]">Carolina Herrera</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDP]">Burberry</a>
-            </div>
-          </div>
-        </li>
-        <!-- Men -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Masculine]">Men Fragrance</a>
-          <div class="dropdown-content">
-            <div class="dropdown-column">
-              <h4>Men Fragrance</h4>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDC]">Eau de cologne</a>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDP]">Eau de parfum</a>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDT]">Eau de toilette</a>
-            </div>
-            <div class="dropdown-column">
-              <h4>Popular brands</h4>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDP]">Dior</a>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDP]">Versace</a>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDP]">Armani</a>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDP]">Jean Paul Gaultier</a>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDP]">Valentino</a>
-            </div>
-          </div>
-        </li>
-        <!-- Unisex -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Unisex]">Unisex Fragrance</a>
-          <div class="dropdown-content">
-            <div class="dropdown-column">
-              <h4>Unisex Fragrance</h4>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.Extract]">Perfume extract</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Eau de parfum</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDT]">Eau de toilette</a>
-            </div>
-            <div class="dropdown-column">
-              <h4>Popular brands</h4>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Tom Ford</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Kilian</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Jo Malone</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Montale</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Xerjoff</a>
-            </div>
-          </div>
-        </li>
-        <!-- Niche -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Unisex]">Niche Fragrance</a>
-          <div class="dropdown-content">
-            <div class="dropdown-column">
-              <h4>Niche Fragrance</h4>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.Extract]">Parfum extract</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.Perfume]">Parfum</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.Artisan]">Artisan</a>
-            </div>
-            <div class="dropdown-column">
-              <h4>Popular brands</h4>
-              <a [routerLink]="['/perfume',Sex.Feminine]">Zoologist</a>
-              <a [routerLink]="['/perfume',Sex.Feminine]">DIOR</a>
-              <a [routerLink]="['/perfume',Sex.Feminine]">Jo Malone</a>
-              <a [routerLink]="['/perfume',Sex.Feminine]">Montale</a>
-              <a [routerLink]="['/perfume',Sex.Feminine]">Xerjoff</a>
-            </div>
-          </div>
-        </li>
-        <!-- Perfume Sets -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume',PerfumeType.BM]">Perfumes Sets</a>
-          <div class="dropdown-content">
-            <div class="dropdown-column">
-              <h4>Perfumes Sets</h4>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.BM]">Masculine Sets</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.BM]">Feminine Sets</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.BM]">Unisex Sets</a>
-            </div>
-            <div class="dropdown-column">
-              <h4>Popular brands</h4>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Versace</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">NOVELLISTA</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">DIOR</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Hugo Boss</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Armani</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">GUERLAIN</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">HERMÈS</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Rabanne</a>
-            </div>
-          </div>
-        </li>
-        <!-- Refillable -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Refillable Perfumes</a>
-          <div class="dropdown-content">
-            <div class="dropdown-column">
-              <h4>Perfumes Sets</h4>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.Perfume]">Parfum</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Eau de parfum</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.Intense]">Eau de parfum intense</a>
-            </div>
-            <div class="dropdown-column">
-              <h4>Popular brands</h4>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">YSL</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Armani</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">DIOR</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Jean Paul Gaultier</a>
-            </div>
-          </div>
-        </li>
-        <!-- Decants -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDP]">Decants</a>
-        </li>
-        <!-- Samples -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDP]">Samples</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-
-  <div class="main-content">
-
-    <div class="products">
-      <div class="breadcrumb">
-        <span>Perfumes</span>
-      </div>
-      <h1>Type of the parfume</h1> <!-- {{perfume.type}} //-->
-
-      <div class="product-grid">
-        <div class="perfume-container">
-          @for(perfume of filtredPerfumes; track perfume.id)
-          {
-          <app-perfume-item [perfume]="perfume">
-
-          </app-perfume-item>
-          }
-
-        </div>
-      </div>      
-    </div>
-  
-    <!-- Side Bar -->
-    <div class="sidebar">
-      <h3>Type of the perfume</h3>
-      <ul>
-        <li>Artisan</li>
-        <li class="active">Extract</li>
-        <li>Perfume</li>
-        <li>Intense</li>
-        <li>Eau de Parfum</li>
-        <li>Eau de Toilette</li>
-        <li>Eau de Cologne</li>
-        <li>Body Set</li>
-      </ul>
-      <br>
-      <h4>Price range</h4>
-      <input type="text" placeholder="50 RON"> - <input type="text" placeholder="2000 RON">
-
-      <br><br>
-
-      <h4>Perfume type</h4>
-      <ul>
-        <li><input type="checkbox"> Woody</li>
-        <li><input type="checkbox"> Floral</li>
-        <li><input type="checkbox"> Fruity</li>
-        <li><input type="checkbox"> Marine</li>
-        <li><input type="checkbox"> Green</li>
-      </ul>
-
-      <br>
-
-      <h4>Gender</h4>
-      <ul>
-        <li><input type="checkbox"> Masculine</li>
-        <li><input type="checkbox"> Feminine</li>
-        <li><input type="checkbox"> Unisex</li>
-
-      </ul>
     </div>
   </div>
 
-  
+  <!-- Side Bar -->
+  <div class="sidebar">
+    <h3>Type of the perfume</h3>
+    <ul>
+      <li>Artisan</li>
+      <li class="active">Extract</li>
+      <li>Perfume</li>
+      <li>Intense</li>
+      <li>Eau de Parfum</li>
+      <li>Eau de Toilette</li>
+      <li>Eau de Cologne</li>
+      <li>Body Set</li>
+    </ul>
+    <br />
+    <h4>Price range</h4>
+    <input type="text" placeholder="50 RON" /> -
+    <input type="text" placeholder="2000 RON" />
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-contact">
-        <p>0770 89 80 73</p>
-        <p>Luni-Vineri 8-16, Sambata 10-18</p>
-        <p><a href="mailto:info@ScentSerenity">info&#64;ScentSerenity.com</a></p>
-      </div>
-      <div class="footer-newsletter">
-        <p>Newsletter to e-mail</p>
-        <div class="newsletter-input">
-          <input type="email" placeholder="Email address" class="newsletter-email">
-          <!-- Alert, need to add -->
-          <button> Submit </button>
-        </div>
-      </div>
-    </div>
-    <div class="footer-middle">
-      <div class="footer-column">
-        <h2> Magazinele și punctele noastre de vânzare</h2>
-        <p> Brasov - Calea București 260 </p>
-        <p> Bucuresti - Calea București 260 </p>
-      </div>
-      <div class="footer-column">
-        <h2>De ce Scent Serenity?</h2>
-        <ul>
-          <li><a [routerLink]="['/benefits']"> Avantajele ScentSerenity</a></li>
-          <li><a [routerLink]="['/about-us']"> Despre noi</a></li>
-          <li><a [routerLink]="['/original-products']"> Produse de marcă originale</a></li>
-          <li><a [routerLink]="['/personal-lift']"> Ridicare Personală</a></li>
-          <li><a [routerLink]="['/gdpr']"> Protecția datelor personale</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h2>Link-uri importante</h2>
-        <ul>
-          <!-- Alert, need to add -->
-          <li><a href="#">Termeni și condiții</a></li>
-          <!-- Pagina, need to add -->
-          <li><a href="#">Cum pot plăti?</a></li>
-          <!-- Alert, need to add -->
-          <li><a [routerLink]="['/transport']">Metode de livrare</a></li>
-          <!-- Pagina, need to add -->
-          <li><a href="#">Reclamații și plângeri</a></li>
-          <!-- Pagina, need to add -->
-          <li><a [routerLink]="['/contact']">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-trust">
-        <a href="https://www.trustpilot.com/"><img src="/assets/trustpilot.png" alt="Trustpilot"></a>
-        <a href="https://anpc.ro/"><img src="/assets/anpc.png" alt="ANPC"></a>
-      </div>
-      <div class="footer-app">
-        <p>Descărcați aplicația mobilă</p>
-        <a href="https://play.google.com/store/games?device=windows"><img src="/assets/googlePlay.png" alt="Google Play"></a>
-        <a href="https://www.apple.com/app-store/"><img src="/assets/apple.png" alt="App Store"></a>
-      </div>
-      <div class="footer-countries">
-        <p>
-          <a href="#">Belgium</a> | <a href="#">Deutschland</a> | <a href="#">France</a> | <a href="#">Great Britain</a>
-          |
-          <a href="#">Österreich</a> | <a href="#">Romania</a>
-        </p>
-      </div>
-    </div>
-    <div class="footer-legal">
-      <p>© 2024 ScentSerenity, s.r.o. (SRL)</p>
-    </div>
-    <div class="footer-social">
-      <a href="#"><img src="/assets/facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="/assets/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="/assets/x.png" alt="Twitter"></a>
-      <a href="#"><img src="/assets/youtube.png" alt="YouTube"></a>
-    </div>
-  </footer>
+    <br /><br />
+
+    <h4>Perfume type</h4>
+    <ul>
+      <li><input type="checkbox" /> Woody</li>
+      <li><input type="checkbox" /> Floral</li>
+      <li><input type="checkbox" /> Fruity</li>
+      <li><input type="checkbox" /> Marine</li>
+      <li><input type="checkbox" /> Green</li>
+    </ul>
+
+    <br />
+
+    <h4>Gender</h4>
+    <ul>
+      <li><input type="checkbox" /> Masculine</li>
+      <li><input type="checkbox" /> Feminine</li>
+      <li><input type="checkbox" /> Unisex</li>
+    </ul>
+  </div>
+</div>

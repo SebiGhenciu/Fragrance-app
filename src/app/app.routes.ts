@@ -16,6 +16,7 @@ import { GdprComponent } from './pages/website/gdpr/gdpr.component';
 import { LanguageComponent } from './pages/website/language/language.component';
 import { MainPageComponent } from './pages/website/main-page/main-page.component';
 import { PersonalLiftComponent } from './pages/website/personal-lift/personal-lift.component';
+import { NavBarComponent } from './pages/website/nav-bar/nav-bar.component';
 
 export const routes: Routes = [
   { path: '', component: MainPageComponent },

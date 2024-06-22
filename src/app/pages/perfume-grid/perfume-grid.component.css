@@ -1,12 +1,12 @@
 /* GRID */
 
 .perfume-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap ;
-    gap: 10px;
-    margin: 10px;
-    margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+  margin-bottom: 50px;
 }
 
 /* Grid 2 */
@@ -31,10 +31,11 @@
   background: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar h3, .sidebar h4 {
+.sidebar h3,
+.sidebar h4 {
   margin: 0 0 10px;
 }
 
@@ -78,209 +79,275 @@ h1 {
   margin: 20px 0;
 }
 
-
 /* Navigation bar */
 .navbar {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;}
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Adăugăm wrap pentru a permite rânduri multiple */
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+.search-account-cart {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.search-bar {
+  flex: 1;
+  display: flex;
+  margin-right: 20px;
+}
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+.search-bar button {
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: center; /* Centrăm categoriile */
+  flex-wrap: wrap; /* Adăugăm wrap pentru a permite rânduri multiple */
+}
+.nav-links li {
+  position: relative;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+.nav-links .dropdown:hover .dropdown-content {
+  display: flex;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  padding: 40px;
+  z-index: 1;
+}
+.dropdown-column {
+  flex: 1;
+  margin: 0 10px;
+}
+.dropdown-column h4 {
+  margin-top: 0;
+}
+.dropdown-column a {
+  color: #000;
+  padding: 5px 0;
+  text-decoration: none;
+}
+.dropdown-column a:hover {
+  text-decoration: underline;
+}
+.account-cart {
+  display: flex;
+  align-items: center;
+}
+.account-cart a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+.account-cart .wishlist-count {
+  background-color: #e00034;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-left: 5px;
+}
+.fas {
+  margin-right: 5px;
+}
+@media (max-width: 768px) {
   .navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Adăugăm wrap pentru a permite rânduri multiple */}
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;}
+    flex-direction: column;
+  }
   .search-account-cart {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: space-between;
-    margin: 0 20px;}
-  .search-bar {
-    flex: 1;
-    display: flex;
-    margin-right: 20px;}
-  .search-bar input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 5px 0 0 5px;}
-  .search-bar button {
-    background-color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 0 5px 5px 0;}
+    margin: 10px 0;
+  }
   .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    flex: 1;
-    justify-content: center; /* Centrăm categoriile */
-    flex-wrap: wrap; /* Adăugăm wrap pentru a permite rânduri multiple */}
-  .nav-links li {
-    position: relative;}
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;}
-  .nav-links .dropdown:hover .dropdown-content {
-    display: flex;}
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    color: #000;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    width: 350px;
-    padding: 40px;
-    z-index: 1;}
-  .dropdown-column {
-    flex: 1;
-    margin: 0 10px;}
-  .dropdown-column h4 {
-    margin-top: 0;}
-  .dropdown-column a {
-    color: #000;
-    padding: 5px 0;
-    text-decoration: none;}
-  .dropdown-column a:hover {
-    text-decoration: underline;}
+    flex-direction: column;
+  }
   .account-cart {
-    display: flex;
-    align-items: center;}
-  .account-cart a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 15px;
-    display: flex;
-    align-items: center;}
-  .account-cart .wishlist-count {
-    background-color: #e00034;
-    border-radius: 50%;
-    padding: 5px 10px;
-    margin-left: 5px;}
-  .fas {
-    margin-right: 5px;}
-  @media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column;}
-    .search-account-cart {
-        margin: 10px 0;}
-    .nav-links {
-        flex-direction: column;}
-    .account-cart {
-        margin-top: 10px;}}
-  .example-button-row {
-    display: table-cell;
-    max-width: 600px;}
-        
-    /* Footer */
-  .footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px 40px;
-    font-size: 14px;}
-  .footer a {
-    color: #fff;
-    text-decoration: none;}
-  .footer-top, .footer-middle, .footer-bottom {
-    display: flex;
-    justify-content: center; /* Centrăm elementele */
-    flex-wrap: wrap;
-    margin-bottom: 20px;}
-  .footer-top {
-    position: relative; /* Necesită pentru linia verticală */
-    margin-bottom: 40px; /* Spațiu între footer-top și footer-middle */}
-  .footer-contact, .footer-newsletter {
-    padding: 0 20px; /* Adăugăm padding pentru spațiu */}
-  .footer-contact {
-    border-right: 1px solid #fff; /* Linia verticală */
-    padding-right: 40px; /* Spațiu adițional pentru linie */}
-  .footer-newsletter {
-    padding-left: 40px; /* Spațiu adițional pentru linie */}
-  .footer-middle {
-    border-top: 1px solid #444; /* Linia orizontală */
-    padding-top: 20px; /* Spațiu adițional pentru linie */}
-  .footer-contact p, .footer-newsletter p {
-    margin: 0;}
-  .footer-contact a, .footer-newsletter a {
-    display: block;
-    margin-top: 5px;}
-  .footer-newsletter {
-    max-width: 400px;}
-  .newsletter-input {
-    display: flex;
-    margin-top: 10px;}
-  .newsletter-input input {
-    padding: 5px;
-    border: 1px solid #444;
-    border-radius: 5px;
-    flex: 1;}
-  .newsletter-email {
-    width: 300px; /* Setează lățimea dorită */
-    height: 20px;
-    padding: 5px; /* Adaugă padding pentru aspect */
-    border: 1px solid #444; /* Adaugă bordură */
-    border-radius: 5px; /* Colțuri rotunjite */}
-  .newsletter-input button {
-    background-color: #000;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 5px;}
-  .footer-column {
-    flex: 1 1 200px;
-    margin-right: 20px;}
-  .footer-column h4 {
-    margin-bottom: 10px;}
-  .footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;}
-  .footer-column ul li {
-    margin-bottom: 5px;}
-  .footer-bottom {
-    border-top: 1px solid #444; /* Linia orizontală */
-    padding-top: 20px;
-   }
-  .footer-trust, .footer-app, .footer-countries {
-    text-align: center;}
-  .footer-trust a, .footer-app a, a {
-    margin: 0 10px;}
-  .footer-app p, .footer-countries p {
-    margin-bottom: 10px;}
-  .footer-app img, .footer-trust img {
-    max-height: 30px;}
-  .footer-countries {
-    margin-bottom: -10px;;
-    flex: 1 1 100%;
-    border-top: 1px solid #444; /* Linia orizontală */
-    padding-top: 20px; /* Spațiu adițional pentru linie */}
-  .footer-countries a {
-    display: inline-block;
-    margin-bottom: 5px;}
-  .footer-legal {
-    text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #444;
-    padding-top: 10px;}
-  .footer-social {
-    text-align: center;
-    margin-top: 20px;}
-  .footer-social a {
-    margin: 0 5px;}
-  .footer-social img {
-    max-height: 20px;}
-  .main-content {
-    padding: 20px;}
+    margin-top: 10px;
+  }
+}
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 14px;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-top,
+.footer-middle,
+.footer-bottom {
+  display: flex;
+  justify-content: center; /* Centrăm elementele */
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.footer-top {
+  position: relative; /* Necesită pentru linia verticală */
+  margin-bottom: 40px; /* Spațiu între footer-top și footer-middle */
+}
+.footer-contact,
+.footer-newsletter {
+  padding: 0 20px; /* Adăugăm padding pentru spațiu */
+}
+.footer-contact {
+  border-right: 1px solid #fff; /* Linia verticală */
+  padding-right: 40px; /* Spațiu adițional pentru linie */
+}
+.footer-newsletter {
+  padding-left: 40px; /* Spațiu adițional pentru linie */
+}
+.footer-middle {
+  border-top: 1px solid #444; /* Linia orizontală */
+  padding-top: 20px; /* Spațiu adițional pentru linie */
+}
+.footer-contact p,
+.footer-newsletter p {
+  margin: 0;
+}
+.footer-contact a,
+.footer-newsletter a {
+  display: block;
+  margin-top: 5px;
+}
+.footer-newsletter {
+  max-width: 400px;
+}
+.newsletter-input {
+  display: flex;
+  margin-top: 10px;
+}
+.newsletter-input input {
+  padding: 5px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  flex: 1;
+}
+.newsletter-email {
+  width: 300px; /* Setează lățimea dorită */
+  height: 20px;
+  padding: 5px; /* Adaugă padding pentru aspect */
+  border: 1px solid #444; /* Adaugă bordură */
+  border-radius: 5px; /* Colțuri rotunjite */
+}
+.newsletter-input button {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.footer-column {
+  flex: 1 1 200px;
+  margin-right: 20px;
+}
+.footer-column h4 {
+  margin-bottom: 10px;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+.footer-bottom {
+  border-top: 1px solid #444; /* Linia orizontală */
+  padding-top: 20px;
+}
+.footer-trust,
+.footer-app,
+.footer-countries {
+  text-align: center;
+}
+.footer-trust a,
+.footer-app a,
+a {
+  margin: 0 10px;
+}
+.footer-app p,
+.footer-countries p {
+  margin-bottom: 10px;
+}
+.footer-app img,
+.footer-trust img {
+  max-height: 30px;
+}
+.footer-countries {
+  margin-bottom: -10px;
+  flex: 1 1 100%;
+  border-top: 1px solid #444; /* Linia orizontală */
+  padding-top: 20px; /* Spațiu adițional pentru linie */
+}
+.footer-countries a {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.footer-legal {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+.footer-social {
+  text-align: center;
+  margin-top: 20px;
+}
+.footer-social a {
+  margin: 0 5px;
+}
+.footer-social img {
+  max-height: 20px;
+}
+.main-content {
+  padding: 20px;
+}

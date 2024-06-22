@@ -4,7 +4,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { Sex } from '../../../enums/sex.enum';
 import { PerfumeType } from '../../../enums/perfume-type.enum';
-/* import { Note } from "../../../enums/notes.enum"; */
+import { Note } from "../../../enums/notes.enum";
 
 
 @Component({
@@ -22,8 +22,8 @@ export class MainPageComponent {
   get PerfumeType() {
     return PerfumeType;
   }
-  /*
+  
   get Note() {
-    return PerfumeType;
-  } */
+    return Note;
+  } 
 }

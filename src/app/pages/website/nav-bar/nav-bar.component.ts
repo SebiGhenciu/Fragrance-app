@@ -30,7 +30,6 @@ export class NavBarComponent {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   searchPerfumes() {
-   
     window.location.href = '/perfume/' + this.perfumeName;
   }
 }

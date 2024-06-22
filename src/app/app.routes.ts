@@ -37,6 +37,8 @@ export const routes: Routes = [
   { path: 'perfume/:sex/:perfumeType', component: PerfumeGridComponent },
   { path: 'original-products', component: OriginalProductsComponent },
   { path: 'transport', component: TransportComponent },
+  { path: 'perfume/:name', component: PerfumeGridComponent },
+
 ];
 
 /* { path: 'perfume/:perfumeType', component: PerfumeGridComponent, }, */

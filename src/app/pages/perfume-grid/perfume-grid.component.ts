@@ -28,6 +28,7 @@ export class PerfumeGridComponent {
   filtredPerfumes: Perfume[] = [];
   perfumesSex!: Sex;
   perfumeType!: PerfumeType;
+  perfumeName!: string;
 
   constructor(
     private perfumeService: PerfumesService,
@@ -35,10 +36,18 @@ export class PerfumeGridComponent {
   ) {
     this.perfumeService.getAllPerfumes().subscribe((perfumes) => {
       this.perfumes = perfumes;
-      if (this.perfumeType == PerfumeType.All) {
+
+      if (this.perfumeName) {
         this.filtredPerfumes = this.perfumes.filter(
           (perfume) =>
-            perfume.sex == this.perfumesSex
+            perfume.name
+              .toLowerCase()
+              .indexOf(this.perfumeName.toLowerCase()) !== -1
+        );
+      }
+      if (this.perfumeType == PerfumeType.All) {
+        this.filtredPerfumes = this.perfumes.filter(
+          (perfume) => perfume.sex == this.perfumesSex
         );
       } else {
         if (this.perfumeType && this.perfumesSex) {
@@ -53,6 +62,7 @@ export class PerfumeGridComponent {
     this.route.params.subscribe((params) => {
       this.perfumesSex = params['sex'];
       this.perfumeType = params['perfumeType'];
+      this.perfumeName = params['name'];
     });
   }
 }

@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Sex } from '../../../enums/sex.enum';
 import { PerfumeType } from '../../../enums/perfume-type.enum';
 import { Note } from '../../../enums/notes.enum';
 import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [RouterLink, MatIconModule],
+  imports: [RouterLink, MatIconModule, FormsModule],
   templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.css'
+  styleUrl: './nav-bar.component.css',
 })
 export class NavBarComponent {
   get Sex() {
@@ -19,8 +20,18 @@ export class NavBarComponent {
   get PerfumeType() {
     return PerfumeType;
   }
-  
+
   get Note() {
     return Note;
-  } 
+  }
+
+  perfumeName = '';
+
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
+  searchPerfumes() {
+    // this.router.navigate(['/perfume', this.perfumeName]);
+    // TINEL FIX THIS
+    window.location.href = '/perfume/' + this.perfumeName;
+  }
 }

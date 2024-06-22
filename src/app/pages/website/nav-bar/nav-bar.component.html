@@ -4,8 +4,8 @@
       <a [routerLink]="['/main-page']" class="logo">Scent Serenity</a>
       <div class="search-account-cart">
         <div class="search-bar">
-          <input type="text" placeholder="Search a fragrance.." />
-          <button><mat-icon>search</mat-icon></button>
+          <input type="text" placeholder="Search a fragrance..." [(ngModel)]="perfumeName"/>
+          <button (click)="searchPerfumes()"><mat-icon>search</mat-icon></button>
         </div>
         <div class="account-cart">
           <a [routerLink]="['/login']"><i class="fas fa-user"></i> Sebastian</a>

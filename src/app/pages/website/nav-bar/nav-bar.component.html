@@ -1,5 +1,6 @@
   <!-- Nav Bar -->
   <nav class="navbar">
+     <!-- Search bar and other -->
     <div class="navbar-container">
       <a [routerLink]="['/main-page']" class="logo">Scent Serenity</a>
       <div class="search-account-cart">
@@ -20,9 +21,10 @@
     </div>
 
     <div class="navbar-container">
+       <!-- Drop down  -->
       <ul class="nav-links">
-        <!-- Promotii -->
-        <li><a [routerLink]="['/perfume']">Promotions</a></li>
+        <!-- Promotions -->
+        <li><a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.All]">Promotions</a></li>
         <!-- Women -->
         <li class="dropdown">
           <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.All]"
@@ -60,7 +62,7 @@
         </li>
         <!-- Men -->
         <li class="dropdown">
-          <a [routerLink]="['/perfume', Sex.Masculine]">Men Fragrance</a>
+          <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.All]">Men Fragrance</a>
           <div class="dropdown-content">
             <div class="dropdown-column">
               <h4>Men Fragrance</h4>
@@ -76,12 +78,11 @@
             </div>
             <div class="dropdown-column">
               <h4>Popular brands</h4>
-              <!-- 
-              <a [routerLink]="['/perfume',Sex.Feminine,Note.Woody]">Woody</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,Note.Floral]">Floral</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,Note.Fruity]">Fruity</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,Note.Marine]">Marine</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,Note.Green]">Green</a> -->
+              <a [routerLink]="['/perfume',Sex.Masculine,Note.Woody]">Woody</a>
+              <a [routerLink]="['/perfume',Sex.Masculine,Note.Floral]">Floral</a>
+              <a [routerLink]="['/perfume',Sex.Masculine,Note.Fruity]">Fruity</a>
+              <a [routerLink]="['/perfume',Sex.Masculine,Note.Marine]">Marine</a>
+              <a [routerLink]="['/perfume',Sex.Masculine,Note.Green]">Green</a>
             </div>
           </div>
         </li>

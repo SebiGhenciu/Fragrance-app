@@ -30,9 +30,7 @@ export class NavBarComponent {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   searchPerfumes() {
-    // this.router.navigate(['/perfume', this.perfumeName]);
-    // TINEL FIX THIS
-    //gen daca folosesc aia de sus, se schimba parametrul da nu isi da update componenta
+   
     window.location.href = '/perfume/' + this.perfumeName;
   }
 }

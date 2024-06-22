@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; /* Adăugăm wrap pentru a permite rânduri multiple */
+  flex-wrap: wrap; 
 }
 .logo {
   font-size: 24px;
@@ -47,8 +47,8 @@
   margin: 0;
   padding: 0;
   flex: 1;
-  justify-content: center; /* Centrăm categoriile */
-  flex-wrap: wrap; /* Adăugăm wrap pentru a permite rânduri multiple */
+  justify-content: center; 
+  flex-wrap: wrap; 
   gap: 20px;
 }
 

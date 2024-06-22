@@ -2,7 +2,7 @@
   <div class="carousel-container">
     <div class="carousel">
       <ng-container *ngFor="let slide of slides; let i = index">
-        <img *ngIf="i === currentSlide" [src]="slide.src" class="slide" />
+        <img *ngIf="i === currentSlide" [src]="slide.src" class="slide" [routerLink]="[slide.link]"/>
       </ng-container>
 
       <!-- controls -->

@@ -26,9 +26,9 @@ export class MainPageComponent {
     return Note;
   }
   public slides = [
-    { src: "/assets/brand1.png" },
-    { src: "/assets/brand2.png" },
-    { src: "/assets/brand3.png" }
+    { src: "/assets/brand1.png" , link: '/cart'},
+    { src: "/assets/brand2.png" , link: '/perfume'},
+    { src: "/assets/brand3.png" , link: '/cart'}
   ]; 
 
   currentSlide = 0;

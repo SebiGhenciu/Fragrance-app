@@ -4,6 +4,7 @@
   </mat-card-header>
   <img mat-card-image class="perfume-image" [src]="perfume.images[0]" alt="Perfume Image">
   <mat-card-content>
+    <!-- [routerLink]="['/perfume', perfume.id] -->
       <h2>{{perfume.name}}</h2>
       <p>{{perfume.price}} RON for {{perfume.quantity}} ML</p>
       <a class="fragrantica-link" [href]='perfume.fragranticaLink'>Check in on Fragrantica</a>

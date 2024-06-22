@@ -17,6 +17,15 @@
   flex-direction: row-reverse; /* Mută sidebar-ul în dreapta */
 }
 
+.sort-dropdown-container {
+  margin-bottom: 16px;
+  text-align: right;
+}
+
+.sort-dropdown-container label {
+  margin-right: 8px;
+}
+
 .sidebar {
   width: 250px;
   background: #fff;

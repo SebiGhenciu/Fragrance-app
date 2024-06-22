@@ -156,8 +156,9 @@
     </div>
   </nav>
 
-<!-- Main Items -->
-<div class="main-content">
+
+  <div class="main-content">
+
     <div class="products">
       <div class="breadcrumb">
         <span>Perfumes</span>
@@ -169,13 +170,12 @@
           @for(perfume of filtredPerfumes; track perfume.id)
           {
           <app-perfume-item [perfume]="perfume">
-      
+
           </app-perfume-item>
           }
 
         </div>
-      </div>
-      
+      </div>      
     </div>
   
     <!-- Side Bar -->

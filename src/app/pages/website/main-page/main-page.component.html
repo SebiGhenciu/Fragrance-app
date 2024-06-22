@@ -1,8 +1,8 @@
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scent Navbar</title>
-  <link rel="stylesheet" href="main-page.component.css">
+  <link rel="stylesheet" href="main-page.component.css" />
 </head>
 
 <body>
@@ -12,13 +12,17 @@
       <a [routerLink]="['/main-page']" class="logo">Scent Serenity</a>
       <div class="search-account-cart">
         <div class="search-bar">
-          <input type="text" placeholder="Search a fragrance..">
+          <input type="text" placeholder="Search a fragrance.." />
           <button><mat-icon>search</mat-icon></button>
         </div>
         <div class="account-cart">
           <a [routerLink]="['/login']"><i class="fas fa-user"></i> Sebastian</a>
-          <a [routerLink]="['/favorite']"><i class="fas fa-heart"></i> Favorites </a>
-          <a [routerLink]="['/cart']"><i class="fas fa-shopping-cart"></i> Shopping cart</a>
+          <a [routerLink]="['/favorite']"
+            ><i class="fas fa-heart"></i> My Account
+          </a>
+          <a [routerLink]="['/cart']"
+            ><i class="fas fa-shopping-cart"></i> Shopping cart</a
+          >
         </div>
       </div>
     </div>
@@ -29,13 +33,19 @@
         <li><a [routerLink]="['/perfume']">Promotions</a></li>
         <!-- Women -->
         <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Feminine]">Women Fragrance</a>
+          <a [routerLink]="['/perfume', Sex.Feminine]">Women Fragrance</a>
           <div class="dropdown-content">
             <div class="dropdown-column">
               <h4>Women Fragrance</h4>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDP]">Eau de parfum</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDT]">Eau de toilette</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.Extract]">Body Mist</a>
+              <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.EDP]"
+                >Eau de parfum</a
+              >
+              <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.EDT]"
+                >Eau de toilette</a
+              >
+              <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.Extract]"
+                >Body Mist</a
+              >
             </div>
             <div class="dropdown-column">
               <h4>Popular brands</h4>
@@ -51,17 +61,23 @@
         </li>
         <!-- Men -->
         <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Masculine]">Men Fragrance</a>
+          <a [routerLink]="['/perfume', Sex.Masculine]">Men Fragrance</a>
           <div class="dropdown-content">
             <div class="dropdown-column">
               <h4>Men Fragrance</h4>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDC]">Eau de cologne</a>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDP]">Eau de parfum</a>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDT]">Eau de toilette</a>
+              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDC]"
+                >Eau de cologne</a
+              >
+              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDP]"
+                >Eau de parfum</a
+              >
+              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDT]"
+                >Eau de toilette</a
+              >
             </div>
             <div class="dropdown-column">
               <h4>Popular brands</h4>
-               <!-- 
+              <!-- 
               <a [routerLink]="['/perfume',Sex.Feminine,Note.Woody]">Woody</a>
               <a [routerLink]="['/perfume',Sex.Feminine,Note.Floral]">Floral</a>
               <a [routerLink]="['/perfume',Sex.Feminine,Note.Fruity]">Fruity</a>
@@ -72,17 +88,23 @@
         </li>
         <!-- Unisex -->
         <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Unisex]">Unisex Fragrance</a>
+          <a [routerLink]="['/perfume', Sex.Unisex]">Unisex Fragrance</a>
           <div class="dropdown-content">
             <div class="dropdown-column">
               <h4>Unisex Fragrance</h4>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.Extract]">Perfume extract</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Eau de parfum</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDT]">Eau de toilette</a>
+              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Extract]"
+                >Perfume extract</a
+              >
+              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDP]"
+                >Eau de parfum</a
+              >
+              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDT]"
+                >Eau de toilette</a
+              >
             </div>
             <div class="dropdown-column">
               <h4>Popular brands</h4>
-               <!-- 
+              <!-- 
               <a [routerLink]="['/perfume',Sex.Feminine,Note.Woody]">Woody</a>
               <a [routerLink]="['/perfume',Sex.Feminine,Note.Floral]">Floral</a>
               <a [routerLink]="['/perfume',Sex.Feminine,Note.Fruity]">Fruity</a>
@@ -93,13 +115,19 @@
         </li>
         <!-- Niche -->
         <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Unisex]">Niche Fragrance</a>
+          <a [routerLink]="['/perfume', Sex.Unisex]">Niche Fragrance</a>
           <div class="dropdown-content">
             <div class="dropdown-column">
               <h4>Niche Fragrance</h4>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.Extract]">Parfum extract</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.Perfume]">Parfum</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.Artisan]">Artisan</a>
+              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Extract]"
+                >Parfum extract</a
+              >
+              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Perfume]"
+                >Parfum</a
+              >
+              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Artisan]"
+                >Artisan</a
+              >
             </div>
             <div class="dropdown-column">
               <h4>Popular brands</h4>
@@ -114,13 +142,19 @@
         </li>
         <!-- Perfume Sets -->
         <li class="dropdown">
-          <a [routerLink]="['/perfume',PerfumeType.BM]">Perfumes Sets</a>
+          <a [routerLink]="['/perfume', PerfumeType.BM]">Perfumes Sets</a>
           <div class="dropdown-content">
             <div class="dropdown-column">
               <h4>Perfumes Sets</h4>
-              <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.BM]">Masculine Sets</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.BM]">Feminine Sets</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.BM]">Unisex Sets</a>
+              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.BM]"
+                >Masculine Sets</a
+              >
+              <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.BM]"
+                >Feminine Sets</a
+              >
+              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.BM]"
+                >Unisex Sets</a
+              >
             </div>
             <div class="dropdown-column">
               <h4>Popular brands</h4>
@@ -135,13 +169,21 @@
         </li>
         <!-- Refillable -->
         <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Refillable Perfumes</a>
+          <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDP]"
+            >Refillable Perfumes</a
+          >
           <div class="dropdown-content">
             <div class="dropdown-column">
-              <h4>Perfumes Sets</h4>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.Perfume]">Parfum</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.EDP]">Eau de parfum</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,PerfumeType.Intense]">Eau de parfum intense</a>
+              <h4>Refillable Perfumes</h4>
+              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Perfume]"
+                >Parfum</a
+              >
+              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDP]"
+                >Eau de parfum</a
+              >
+              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Intense]"
+                >Eau de parfum intense</a
+              >
             </div>
             <div class="dropdown-column">
               <h4>Popular brands</h4>
@@ -156,11 +198,15 @@
         </li>
         <!-- Decants -->
         <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Masculine,PerfumeType.EDP]">Decants</a>
+          <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDP]"
+            >Decants</a
+          >
         </li>
         <!-- Samples -->
         <li class="dropdown">
-          <a [routerLink]="['/perfume',Sex.Feminine,PerfumeType.EDP]">Samples</a>
+          <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.EDP]"
+            >Samples</a
+          >
         </li>
       </ul>
     </div>
@@ -186,117 +232,127 @@
       <a class="carousel-next" onclick="plusSlides(1)">&#10095;</a>
     </div>-->
 
-  <!-- carousel -->
-  <div class="carousel">
-    <ng-container *ngFor="let slide of slides; let i = index">
-      <img
-        [src]="slide.src"
-        class="slide"
-      />
-    </ng-container>
+    <!-- carousel -->
+    <div class="carousel">
+      <ng-container *ngFor="let slide of slides; let i = index">
+        <img [src]="slide.src" class="slide" />
+      </ng-container>
 
-    <!-- controls -->
-    <button class="control prev">
-      <span class="arrow left"></span>
-    </button>
-    <button class="control next">
-      <span class="arrow right"></span>
-    </button>
+      <!-- controls -->
+      <button class="control prev">
+        <span class="arrow left"></span>
+      </button>
+      <button class="control next">
+        <span class="arrow right"></span>
+      </button>
     </div>
 
     <!-- Panel -->
     <div class="panel">
       <div class="brands">
-        <img src="/assets/brand1.png" alt="Brand 1">
-        <img src="/assets/brand2.png" alt="Brand 2">
-        <img src="/assets/brand3.png" alt="Brand 3">
+        <img src="/assets/brand1.png" alt="Brand 1" />
+        <img src="/assets/brand2.png" alt="Brand 2" />
+        <img src="/assets/brand3.png" alt="Brand 3" />
       </div>
     </div>
-  
   </div>
-  
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-top">
       <div class="footer-contact">
         <p>0770 89 80 73</p>
-        <p>Luni-Vineri 8-16, Sambata 10-18</p>
-        <p><a href="mailto:info@ScentSerenity">info&#64;ScentSerenity.com</a></p>
+        <p>Monday - Friday 8-16, Saturday 10-18</p>
+        <p>
+          <a href="mailto:info@ScentSerenity">info&#64;ScentSerenity.com</a>
+        </p>
       </div>
       <div class="footer-newsletter">
         <p>Newsletter to e-mail</p>
         <div class="newsletter-input">
-          <input type="email" placeholder="Email address" class="newsletter-email">
+          <input
+            type="email"
+            placeholder="Email address"
+            class="newsletter-email"
+          />
           <!-- Alert, need to add -->
-          <button> Submit </button>
+          <button>Submit</button>
         </div>
       </div>
     </div>
 
     <div class="footer-middle">
-
       <div class="footer-column">
-        <h2> Magazinele și punctele noastre de vânzare</h2>
-        <p> Brasov - Calea București 260 </p>
-        <p> Bucuresti - Calea București 260 </p>
+        <h2>Our stores and points of sale</h2>
+        <p>Brasov - Calea București 260</p>
+        <p>Bucuresti - Calea București 260</p>
       </div>
 
       <div class="footer-column">
         <h2>De ce Scent Serenity?</h2>
         <ul>
-          <li><a [routerLink]="['/benefits']"> Avantajele ScentSerenity</a></li>
-          <li><a [routerLink]="['/about-us']"> Despre noi</a></li>
-          <li><a [routerLink]="['/original-products']"> Produse de marcă originale</a></li>
-          <li><a [routerLink]="['/personal-lift']"> Ridicare Personală</a></li>
-          <li><a [routerLink]="['/gdpr']"> Protecția datelor personale</a></li>
+          <li>
+            <a [routerLink]="['/benefits']"> The benefits of ScentSerenity </a>
+          </li>
+          <li><a [routerLink]="['/about-us']"> About us </a></li>
+          <li>
+            <a [routerLink]="['/original-products']">
+              Original brand products
+            </a>
+          </li>
+          <li><a [routerLink]="['/personal-lift']"> Personal Pickup </a></li>
+          <li><a [routerLink]="['/gdpr']"> Protection of personal data </a></li>
         </ul>
       </div>
 
       <div class="footer-column">
-        <h2>Link-uri importante</h2>
+        <h2>Important links</h2>
         <ul>
-          <li><a href="#">Termeni și condiții</a></li>
-          <li><a href="#">Cum pot plăti?</a></li>
-          <li><a [routerLink]="['/transport']">Metode de livrare</a></li>
-          <li><a href="#">Reclamații și plângeri</a></li>
+          <li><a href="#">Terms and conditions</a></li>
+          <li><a href="#">How can I pay?</a></li>
+          <li><a [routerLink]="['/transport']">Delivery methods</a></li>
+          <li><a href="#">Claims and complaints</a></li>
           <li><a [routerLink]="['/contact']">Contact</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-
       <div class="footer-trust">
-        <a href="https://www.trustpilot.com/"><img src="/assets/trustpilot.png" alt="Trustpilot"></a>
-        <a href="https://anpc.ro/"><img src="/assets/anpc.png" alt="ANPC"></a>
+        <a href="https://www.trustpilot.com/"
+          ><img src="/assets/trustpilot.png" alt="Trustpilot"
+        /></a>
+        <a href="https://anpc.ro/"><img src="/assets/anpc.png" alt="ANPC" /></a>
       </div>
 
       <div class="footer-app">
-        <p>Descărcați aplicația mobilă</p>
-        <a href="https://play.google.com/store/games?device=windows"><img src="/assets/googlePlay.png" alt="Google Play"></a>
-        <a href="https://www.apple.com/app-store/"><img src="/assets/apple.png" alt="App Store"></a>
+        <p>Download the mobile app</p>
+        <a href="https://play.google.com/store/games?device=windows"
+          ><img src="/assets/googlePlay.png" alt="Google Play"
+        /></a>
+        <a href="https://www.apple.com/app-store/"
+          ><img src="/assets/apple.png" alt="App Store"
+        /></a>
       </div>
 
       <div class="footer-countries">
         <p>
-          <a href="#">Belgium</a> | <a href="#">Deutschland</a> | <a href="#">France</a> | <a href="#">Great Britain</a>
+          <a href="#">Belgium</a> | <a href="#">Deutschland</a> |
+          <a href="#">France</a> | <a href="#">Great Britain</a>
           |
           <a href="#">Österreich</a> | <a href="#">Romania</a>
         </p>
       </div>
-
     </div>
 
     <div class="footer-legal">
       <p>© 2024 ScentSerenity, s.r.o. (SRL)</p>
     </div>
     <div class="footer-social">
-      <a href="#"><img src="/assets/facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="/assets/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="/assets/x.png" alt="Twitter"></a>
-      <a href="#"><img src="/assets/youtube.png" alt="YouTube"></a>
+      <a href="#"><img src="/assets/facebook.png" alt="Facebook" /></a>
+      <a href="#"><img src="/assets/instagram.png" alt="Instagram" /></a>
+      <a href="#"><img src="/assets/x.png" alt="Twitter" /></a>
+      <a href="#"><img src="/assets/youtube.png" alt="YouTube" /></a>
     </div>
-
   </footer>
-
 </body>

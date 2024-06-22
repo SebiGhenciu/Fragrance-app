@@ -1,17 +1,17 @@
 <mat-card class="perfume-container">
-    <mat-card-header>
-      <mat-card-title>{{perfume.name}}</mat-card-title>
+  <mat-card-header>
       <mat-card-title>{{perfume.brand}}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image [src]="perfume.images[0]" alt="Perfume Image">
-    <a [href] ='perfume.fragranticaLink'>Check in on Fragrantica</a>
-    <mat-card-content>{{perfume.type}}</mat-card-content> <!-- de pus aici ce tip de parfum este // eau de parfum -->
-    <mat-card-content>{{perfume.price}} RON for {{perfume.quantity}} ML</mat-card-content>
-    <mat-card-actions>
+  </mat-card-header>
+  <img mat-card-image class="perfume-image" [src]="perfume.images[0]" alt="Perfume Image">
+  <mat-card-content>
+      <h2>{{perfume.name}}</h2>
+      <p>{{perfume.price}} RON for {{perfume.quantity}} ML</p>
+      <a class="fragrantica-link" [href]='perfume.fragranticaLink'>Check in on Fragrantica</a>
+  </mat-card-content>
+  <mat-card-actions>
       <button mat-button>Add to Cart</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-</mat-card> 
+  </mat-card-actions>
+</mat-card>
 
 <!-- 
 <mat-card class="perfume-container">

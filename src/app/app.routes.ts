@@ -18,27 +18,24 @@ import { MainPageComponent } from './pages/website/main-page/main-page.component
 import { PersonalLiftComponent } from './pages/website/personal-lift/personal-lift.component';
 
 export const routes: Routes = [
+  { path: '', component: MainPageComponent },
 
-    { path: '', component: MainPageComponent, },
-
-    { path: 'language', component: LanguageComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'main-page', component: MainPageComponent },
-    { path: 'about-us', component: AboutUsComponent },
-    { path: 'benefits', component: BenefitsComponent },
-    { path: 'gdpr', component: GdprComponent, },
-    { path: 'personal-lift', component: PersonalLiftComponent, },
-    { path: 'cart', component: CartComponent, canActivate: [authGuard] },
-    { path: 'favorite', component: FavoriteComponent, },
-    { path: 'account', component: AccountComponent, },
-    { path: 'order', component: OrderComponent, },
-    { path: 'security', component: SecurityComponent, },
-    { path: 'contact', component: ContactComponent, },
-    { path: 'perfume/:sex/:perfumeType', component: PerfumeGridComponent, },
-    { path: 'original-products', component: OriginalProductsComponent, },
-    { path: 'transport', component: TransportComponent, },
+  { path: 'language', component: LanguageComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'main-page', component: MainPageComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'benefits', component: BenefitsComponent },
+  { path: 'gdpr', component: GdprComponent },
+  { path: 'personal-lift', component: PersonalLiftComponent },
+  { path: 'cart', component: CartComponent, canActivate: [authGuard] },
+  { path: 'favorite', component: FavoriteComponent },
+  { path: 'account', component: AccountComponent },
+  { path: 'order', component: OrderComponent },
+  { path: 'security', component: SecurityComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'perfume/:sex/:perfumeType', component: PerfumeGridComponent },
+  { path: 'original-products', component: OriginalProductsComponent },
+  { path: 'transport', component: TransportComponent },
 ];
 
-    /* { path: 'perfume/:perfumeType', component: PerfumeGridComponent, }, */
-    /* { path: 'perfume/:sex/:notes', component: PerfumeGridComponent, }, */
-
+/* { path: 'perfume/:perfumeType', component: PerfumeGridComponent, }, */

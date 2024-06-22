@@ -12,34 +12,47 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-perfume-grid',
   standalone: true,
-  imports: [PerfumeItemComponent,RouterLink,MatButtonModule, MatIconModule],
+  imports: [PerfumeItemComponent, RouterLink, MatButtonModule, MatIconModule],
   templateUrl: './perfume-grid.component.html',
-  styleUrl: './perfume-grid.component.css'
+  styleUrl: './perfume-grid.component.css',
 })
 export class PerfumeGridComponent {
+  get Sex() {
+    return Sex;
+  }
+  get PerfumeType() {
+    return PerfumeType;
+  }
 
-  get Sex() { return Sex; }
-  get PerfumeType() { return PerfumeType; }
-
-  perfumes: Perfume[] = []
+  perfumes: Perfume[] = [];
   filtredPerfumes: Perfume[] = [];
   perfumesSex!: Sex;
   perfumeType!: PerfumeType;
 
-  constructor(private perfumeService: PerfumesService, private route: ActivatedRoute) {
-    this.perfumeService.getAllPerfumes().subscribe(
-      (perfumes) => {
-        this.perfumes = perfumes;
+  constructor(
+    private perfumeService: PerfumesService,
+    private route: ActivatedRoute
+  ) {
+    this.perfumeService.getAllPerfumes().subscribe((perfumes) => {
+      this.perfumes = perfumes;
+      if (this.perfumeType == PerfumeType.All) {
+        this.filtredPerfumes = this.perfumes.filter(
+          (perfume) =>
+            perfume.sex == this.perfumesSex
+        );
+      } else {
         if (this.perfumeType && this.perfumesSex) {
-          console.log(this.perfumeType, this.perfumesSex)
-          this.filtredPerfumes = this.perfumes.filter((perfume) => perfume.sex == this.perfumesSex && perfume.type == this.perfumeType)
-          console.log(this.filtredPerfumes)
+          this.filtredPerfumes = this.perfumes.filter(
+            (perfume) =>
+              perfume.sex == this.perfumesSex &&
+              perfume.type == this.perfumeType
+          );
         }
-      })
-    this.route.params.subscribe(params => {
+      }
+    });
+    this.route.params.subscribe((params) => {
       this.perfumesSex = params['sex'];
       this.perfumeType = params['perfumeType'];
-      this.filtredPerfumes = this.perfumes.filter((perfume) => perfume.sex === this.perfumesSex && perfume.type == this.perfumeType)
     });
   }
 }

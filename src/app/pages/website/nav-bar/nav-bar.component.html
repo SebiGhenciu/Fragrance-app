@@ -10,7 +10,7 @@
         </div>
         <div class="account-cart">
           <a [routerLink]="['/login']"><i class="fas fa-user"></i> Sebastian</a>
-          <a [routerLink]="['/favorite']"
+          <a [routerLink]="['/contact']"
             ><i class="fas fa-heart"></i> My Account
           </a>
           <a [routerLink]="['/cart']"
@@ -46,33 +46,33 @@
             <div class="dropdown-column">
               <h4>Popular brands</h4>
 
-              <a [routerLink]="['/perfume', Sex.Feminine, Note.Woody]">Woody</a>
-              <a [routerLink]="['/perfume', Sex.Feminine, Note.Floral]"
+              <a [routerLink]="['/perfume', Sex.Feminine,null, Note.Woody]">Woody</a>
+              <a [routerLink]="['/perfume', Sex.Feminine,null, Note.Floral]"
                 >Floral</a
               >
-              <a [routerLink]="['/perfume', Sex.Feminine, Note.Fruity]"
+              <a [routerLink]="['/perfume', Sex.Feminine,null, Note.Fruity]"
                 >Fruity</a
               >
-              <a [routerLink]="['/perfume', Sex.Feminine, Note.Marine]"
+              <a [routerLink]="['/perfume', Sex.Feminine,null, Note.Marine]"
                 >Marine</a
               >
-              <a [routerLink]="['/perfume', Sex.Feminine, Note.Green]">Green</a>
+              <a [routerLink]="['/perfume', Sex.Feminine,null, Note.Green]">Green</a>
             </div>
           </div>
         </li>
         <!-- Men -->
         <li class="dropdown">
-          <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.All]">Men Fragrance</a>
+          <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.All,null]">Men Fragrance</a>
           <div class="dropdown-content">
             <div class="dropdown-column">
               <h4>Men Fragrance</h4>
-              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDC]"
+              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDC,null]"
                 >Eau de cologne</a
               >
-              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDP]"
+              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDP,null]"
                 >Eau de parfum</a
               >
-              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDT]"
+              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDT,null]"
                 >Eau de toilette</a
               >
             </div>

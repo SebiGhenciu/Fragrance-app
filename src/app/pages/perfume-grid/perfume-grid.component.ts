@@ -7,6 +7,8 @@ import { PerfumeType } from '../../enums/perfume-type.enum';
 import { Perfume } from '../../models/perfume.model';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { Note } from '../../enums/notes.enum';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-perfume-grid',
@@ -28,6 +30,7 @@ export class PerfumeGridComponent {
   perfumesSex!: Sex;
   perfumeType!: PerfumeType;
   perfumeName!: string;
+  perfumeNote!: Note;
 
   constructor(
     private perfumeService: PerfumesService,
@@ -37,31 +40,46 @@ export class PerfumeGridComponent {
       this.perfumes = perfumes;
 
       if (this.perfumeName) {
-        this.filtredPerfumes = this.perfumes.filter(
-          (perfume) =>
-            perfume.name
-              .toLowerCase()
-              .indexOf(this.perfumeName.toLowerCase()) !== -1
-        );
+        this.searchByName();
       }
-      if (this.perfumeType == PerfumeType.All) {
-        this.filtredPerfumes = this.perfumes.filter(
-          (perfume) => perfume.sex == this.perfumesSex
-        );
-      } else {
-        if (this.perfumeType && this.perfumesSex) {
-          this.filtredPerfumes = this.perfumes.filter(
-            (perfume) =>
-              perfume.sex == this.perfumesSex &&
-              perfume.type == this.perfumeType
-          );
-        }
-      }
+      this.searchByFilters();
     });
-    this.route.params.subscribe((params) => {
+    this.route.params.pipe(takeUntilDestroyed()).subscribe((params) => {
+      console.log(params);
       this.perfumesSex = params['sex'];
       this.perfumeType = params['perfumeType'];
       this.perfumeName = params['name'];
+      this.perfumeNote = params['note'];
+      this.searchByFilters();
     });
+  }
+
+  private searchByFilters() {
+    if (this.perfumeType == PerfumeType.All) {
+      this.filtredPerfumes = this.perfumes.filter(
+        (perfume) => perfume.sex == this.perfumesSex
+      );
+    }
+    if (this.perfumeType && this.perfumesSex) {
+      this.filtredPerfumes = this.perfumes.filter(
+        (perfume) =>
+          perfume.sex == this.perfumesSex && perfume.type == this.perfumeType
+      );
+    }
+    if (this.perfumesSex && this.perfumeNote) {
+      this.filtredPerfumes = this.perfumes.filter(
+        (perfume) =>
+          perfume.sex == this.perfumesSex &&
+          perfume.notes.some((note) => note == this.perfumeNote)
+      );
+    }
+  }
+
+  private searchByName() {
+    this.filtredPerfumes = this.perfumes.filter(
+      (perfume) =>
+        perfume.name.toLowerCase().indexOf(this.perfumeName.toLowerCase()) !==
+        -1
+    );
   }
 }

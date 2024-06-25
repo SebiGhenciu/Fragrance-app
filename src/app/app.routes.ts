@@ -13,7 +13,6 @@ import { PerfumeGridComponent } from './pages/perfume-grid/perfume-grid.componen
 import { AboutUsComponent } from './pages/website/about-us/about-us.component';
 import { BenefitsComponent } from './pages/website/benefits/benefits.component';
 import { GdprComponent } from './pages/website/gdpr/gdpr.component';
-import { LanguageComponent } from './pages/website/language/language.component';
 import { MainPageComponent } from './pages/website/main-page/main-page.component';
 import { PersonalLiftComponent } from './pages/website/personal-lift/personal-lift.component';
 import { NavBarComponent } from './pages/website/nav-bar/nav-bar.component';
@@ -21,7 +20,6 @@ import { NavBarComponent } from './pages/website/nav-bar/nav-bar.component';
 export const routes: Routes = [
   { path: '', component: MainPageComponent },
 
-  { path: 'language', component: LanguageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'main-page', component: MainPageComponent },
   { path: 'about-us', component: AboutUsComponent },
@@ -34,7 +32,7 @@ export const routes: Routes = [
   { path: 'order', component: OrderComponent },
   { path: 'security', component: SecurityComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'perfume/:sex/:perfumeType', component: PerfumeGridComponent },
+  { path: 'perfume/:sex/:perfumeType/:note', component: PerfumeGridComponent },
   { path: 'original-products', component: OriginalProductsComponent },
   { path: 'transport', component: TransportComponent },
   { path: 'perfume/:name', component: PerfumeGridComponent },

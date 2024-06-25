@@ -42,6 +42,29 @@ export class UserService {
 
   }
 
+  update(user: User) {
+    let body = {
+      id:user.id,
+      username: user.username,
+      password: user.password,
+      email: user.email,
+      role: user.role,
+      lastName: user.lastName,
+      firstName: user.firstName,
+      address: user.address,
+      country: user.country,
+      city: user.city,
+      postalCode: user.postalCode,
+      gender: user.gender,
+      phone: user.phone,
+
+    }
+    let url = this.baseUrl + `/User`;
+    this.httpClient.patch<any>(url, body).subscribe();
+
+  }
+
+
   setUser(user: UserDAO) {
     const jsonString = JSON.stringify(user);
     this.cookieService.set(this.userCookieKey, jsonString);

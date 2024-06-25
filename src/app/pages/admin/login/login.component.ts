@@ -64,7 +64,15 @@ export class LoginComponent {
       username: this.registerForm.value['name'],
       password: this.registerForm.value['password'],
       email: this.registerForm.value['email'],
-      role: 0
+      role: 0,
+      lastName: "",
+      firstName: "",
+      address: "",
+      country: "",
+      city: "",
+      postalCode: "",
+      gender: "",
+      phone: "",
     }
     this.userService.register(user)
   }

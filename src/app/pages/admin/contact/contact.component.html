@@ -16,66 +16,44 @@
         </div>
         <div class="content">
           <h2>Date de contact</h2>
-          <form>
+          <form [formGroup]="userFormGroup">
             <h3>Informații personale</h3>
+            
             <div class="form-group">
-              <label>
-                <input type="radio" name="gender" value="female"> Femeie
-              </label>
-              <label>
-                <input type="radio" name="gender" value="male" checked> Bărbat
-              </label>
+              <label for="gender">Gender</label>
+              <input type="text" id="gender" formControlName="gender">
             </div>
             <div class="form-group">
               <label for="phone">Mobil/telefon *</label>
-              <input type="text" id="phone" value="+40 770898073">
-            </div>
-            <div class="form-group">
-              <label>
-                <input type="checkbox"> Vreau să primesc informații despre noutăți, promoții și vouchere de reducere pe email
-              </label>
-            </div>
-            <div class="form-group">
-              <label>
-                <input type="checkbox"> Vreau să primesc informații despre noutăți, promoții și vouchere de reducere prin SMS
-              </label>
+              <input type="text" id="phone" formControlName="phone">
             </div>
             <h3>Adresa de facturare</h3>
             <div class="form-group">
               <label for="firstName">Prenume *</label>
-              <input type="text" id="firstName" value="Sebastian">
+              <input type="text" id="firstName" formControlName="firstName">
             </div>
             <div class="form-group">
               <label for="lastName">Nume *</label>
-              <input type="text" id="lastName" value="Ghenciu">
+              <input type="text" id="lastName" formControlName="lastName">
             </div>
             <div class="form-group">
               <label for="address">Adresa completă *</label>
-              <input type="text" id="address" value="Str.Vişinului Nr.8 Bl.A3 Sc.B Et.1 Ap.7">
+              <input type="text" id="address" formControlName="address">
             </div>
             <div class="form-group">
               <label for="city">Oraș sau localitate *</label>
-              <input type="text" id="city" value="Brasov">
+              <input type="text" id="city" formControlName="city">
             </div>
             <div class="form-group">
-              <label for="county">Județ *</label>
-              <input type="text" id="county" value="Brasov">
+              <label for="country">Country *</label>
+              <input type="text" id="country" formControlName="country">
             </div>
             <div class="form-group">
               <label for="postalCode">Cod poștal *</label>
-              <input type="text" id="postalCode" value="500318">
-            </div>
-            <div class="form-group">
-              <label>
-                <input type="checkbox"> Vreau să introduc informațiile firmei
-              </label>
-            </div>
-            <div class="form-group">
-              <label for="company">Firma</label>
-              <input type="text" id="company" value="Sebastian Ghenciu">
-            </div>
+              <input type="text" id="postalCode" formControlName="postalCode">
+            </div>  
             <div class="form-group form-actions">
-              <input type="submit" value="Save Changes">
+              <input type="submit" value="Save Changes" (click)="save()">
             </div>
           </form>
         </div>

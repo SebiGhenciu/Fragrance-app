@@ -5,7 +5,6 @@
         <img *ngIf="i === currentSlide" [src]="slide.src" class="slide" [routerLink]="[slide.link]"/>
       </ng-container>
 
-      <!-- controls -->
       <button class="control prev" (click)="onPreviousClick()">
         <span class="arrow left"></span>
       </button>

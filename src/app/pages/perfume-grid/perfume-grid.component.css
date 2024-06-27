@@ -50,7 +50,7 @@
   margin-right: 20px;
   margin-left: 20px;
   padding-left: 20px;
-  overflow-y: auto; /* Scroll on product list */
+  overflow-y: auto; 
 }
 .breadcrumb {
   font-size: 0.9em;

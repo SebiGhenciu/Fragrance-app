@@ -57,8 +57,6 @@
   &:hover, &:focus {
     opacity: 1;
   }
-
-  /* Position the buttons */
   &.next {
     right: 0;
   }
@@ -67,7 +65,6 @@
   }
 }
 
-/* style the arrows */
 .arrow {
   display: block;
   border-left: 0.1em solid black;

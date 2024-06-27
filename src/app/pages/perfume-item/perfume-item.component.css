@@ -14,7 +14,7 @@
 .perfume-image {
   max-height: 150px;
   margin-bottom: 16px;
-  object-fit: contain; /* Ensures the image fits within the specified height */
+  object-fit: contain; 
 }
 .perfume-details {
   display: flex;
@@ -30,13 +30,13 @@
   margin: 4px 0;
 }
 .perfume-rating {
-  color: #ffd700; /* Gold color for stars */
+  color: #ffd700; 
 }
 .bold-price {
   font-weight: bold;
 }
 .fragrantica-link {
-  color: #8a2be2; /* Example color for the link */
+  color: #8a2be2; 
   text-decoration: none;
 }
 .fragrantica-link:hover {
@@ -46,20 +46,20 @@
   display: flex;
   justify-content: center;
   gap: 8px;
-  width: 100%; /* Ensures buttons are centered */
-  margin-top: 16px; /* Adds space between content and actions */
+  width: 100%; 
+  margin-top: 16px; 
 }
 .add-to-cart-button, .share-button {
-  background-color: #6200ea; /* Example primary color */
+  background-color: #6200ea; 
   color: #fff;
-  padding: 10px 20px; /* Adds padding to the buttons */
+  padding: 10px 20px; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  text-transform: none; /* Ensures text is not transformed */
+  text-transform: none; 
 }
 .add-to-cart-button:hover, .share-button:hover {
-  background-color: #3700b3; /* Darker shade for hover effect */
+  background-color: #3700b3; 
 }
 .example-label {
   display: table-cell;

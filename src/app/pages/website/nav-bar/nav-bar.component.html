@@ -35,16 +35,16 @@
       </li>
       <!-- Women -->
       <li class="dropdown">
-        <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.All, Note.Undefined]"
+        <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.All, Note.Woody]"
           >Women Fragrance</a
         >
         <div class="dropdown-content">
           <div class="dropdown-column">
             <h4>Women Fragrance</h4>
-            <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.EDP, Note.Undefined]"
+            <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.EDP, Note.Marine]"
               >Eau de parfum</a
             >
-            <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.EDT, Note.Undefined]"
+            <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.EDT, Note.Floral]"
               >Eau de toilette</a
             >
             <a
@@ -52,7 +52,7 @@
                 '/perfume',
                 Sex.Feminine,
                 PerfumeType.Extract,
-                Note.Undefined
+                Note.Fruity
               ]"
               >Body Mist</a
             >
@@ -80,19 +80,19 @@
       </li>
       <!-- Men -->
       <li class="dropdown">
-        <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.All, null]"
+        <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.All, Note.Marine]"
           >Men Fragrance</a
         >
         <div class="dropdown-content">
           <div class="dropdown-column">
             <h4>Men Fragrance</h4>
-            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDC, null]"
+            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDC, Note.Woody]"
               >Eau de cologne</a
             >
-            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDP, null]"
+            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDP, Note.Marine]"
               >Eau de parfum</a
             >
-            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDT, null]"
+            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDT, Note.Floral]"
               >Eau de toilette</a
             >
           </div>
@@ -118,17 +118,17 @@
       </li>
       <!-- Unisex -->
       <li class="dropdown">
-        <a [routerLink]="['/perfume', Sex.Unisex]">Unisex Fragrance</a>
+        <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Marine]">Unisex Fragrance</a>
         <div class="dropdown-content">
           <div class="dropdown-column">
             <h4>Unisex Fragrance</h4>
-            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Extract, null]"
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Extract, Note.Marine]"
               >Perfume extract</a
             >
-            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDP, null]"
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDP, Note.Woody]"
               >Eau de parfum</a
             >
-            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDT, null]"
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDT, Note.Floral]"
               >Eau de toilette</a
             >
           </div>
@@ -154,17 +154,17 @@
       </li>
       <!-- Niche -->
       <li class="dropdown">
-        <a [routerLink]="['/perfume', Sex.Unisex]">Niche Fragrance</a>
+        <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Perfume, Note.Fruity]">Niche Fragrance</a>
         <div class="dropdown-content">
           <div class="dropdown-column">
             <h4>Niche Fragrance</h4>
-            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Extract, null]"
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Extract, Note.Floral]"
               >Parfum extract</a
             >
-            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Perfume, null]"
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Perfume, Note.Fruity]"
               >Parfum</a
             >
-            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Artisan, null]"
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Artisan, Note.Green]"
               >Artisan</a
             >
           </div>
@@ -190,17 +190,17 @@
       </li>
       <!-- Perfume Sets -->
       <li class="dropdown">
-        <a [routerLink]="['/perfume', PerfumeType.BM]">Perfumes Sets</a>
+        <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.BM, Note.Marine]">Perfumes and Sets</a>
         <div class="dropdown-content">
           <div class="dropdown-column">
             <h4>Perfumes Sets</h4>
-            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.BM, null]"
+            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.BM, Note.Marine]"
               >Masculine Sets</a
             >
-            <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.BM, null]"
+            <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.BM, Note.Floral]"
               >Feminine Sets</a
             >
-            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.BM, null]"
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.BM, Note.Woody]"
               >Unisex Sets</a
             >
           </div>
@@ -233,14 +233,14 @@
           <div class="dropdown-column">
             <h4>Refillable Perfumes</h4>
             <a
-              [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Perfume, null]"
+              [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Perfume, Note.Woody]"
               >Parfum</a
             >
-            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDP, null]"
+            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDP,  Note.Floral]"
               >Eau de parfum</a
             >
             <a
-              [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Intense, null]"
+              [routerLink]="['/perfume', Sex.Feminine, null, Note.Fruity]"
               >Eau de parfum intense</a
             >
           </div>
@@ -249,16 +249,16 @@
             <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Woody]"
               >Woody</a
             >
-            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Floral]"
+            <a [routerLink]="['/perfume', Sex.Masculine, null, Note.Floral]"
               >Floral</a
             >
-            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Fruity]"
+            <a [routerLink]="['/perfume', Sex.Feminine, null, Note.Fruity]"
               >Fruity</a
             >
             <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Marine]"
               >Marine</a
             >
-            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Green]"
+            <a [routerLink]="['/perfume', Sex.Masculine, null, Note.Green]"
               >Green</a
             >
           </div>
@@ -266,13 +266,13 @@
       </li>
       <!-- Decants -->
       <li class="dropdown">
-        <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.All, null]"
+        <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.BM, Note.Marine]"
           >Decants</a
         >
       </li>
       <!-- Samples -->
       <li class="dropdown">
-        <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.All, null]"
+        <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.BM, Note.Floral]"
           >Samples</a
         >
       </li>

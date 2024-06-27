@@ -1,28 +1,24 @@
-
-
-  <!-- Main -->
-  <div id="main-content">
-        <div class="sidebar">
-          <p class="user-name">Sebastian</p>
-          <p class="user-email">sebyghenciu5&#64;gmail.com</p>
-          <ul class="menu">
-            <li>Comenzile mele</li>
-            <li>Produse cumpărate</li>
-            <li>Produse returnate</li>
-            <li class="active">Logare și securitate</li>
-            <li>Date de contact</li>
-            <li>Cardul clientului</li>
-            <li>Deconectați-vă</li>
-          </ul>
-        </div>
-        <div class="content">
-          <h2>Logare și securitate</h2>
-          <div class="auth-info">
-            <p class="auth-label">Date de autentificare</p>
-            <p class="auth-value">sebyghenciu5&#64;gmail.com</p>
-            <button class="auth-btn">Modificați-vă adresa de e-mail</button>
-            <button class="auth-btn">Schimbă parola</button>
-          </div>
-        </div>
-  </div>      
-
+<div id="main-content">
+  <div class="sidebar">
+    <p class="user-name">My account</p>
+    <br>
+    <ul>
+      <li><a [routerLink]="['/account']" >My orders</a></li>
+      <li><a [routerLink]="['/order']">Purchased products</a></li>
+      <li><a [routerLink]="['/cart']">Cart</a></li>
+      <li><a [routerLink]="['/security']" class="active">Login and security</a></li>
+      <li><a [routerLink]="['/contact']" >Contact details</a></li>
+      <li><a [routerLink]="['/favorite']">Favourites</a></li>
+      <li><a [routerLink]="['/cart']">Log out</a></li>
+  </ul>
+  </div>
+  <div class="content">
+    <h2>Logare și securitate</h2>
+    <div class="auth-info">
+      <p class="auth-label">Date de autentificare</p>
+      <p class="auth-value">sebyghenciu5&#64;gmail.com</p>
+      <button class="auth-btn">Modificați-vă adresa de e-mail</button>
+      <button class="auth-btn">Schimbă parola</button>
+    </div>
+  </div>
+</div>

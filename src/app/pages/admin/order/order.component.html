@@ -1,89 +1,45 @@
+<!-- Main Content -->
+<div id="main-content">
+  <div class="sidebar">
+    <p class="user-name">My account</p>
+    <br>
+    <ul>
+      <li><a [routerLink]="['/account']" >My orders</a></li>
+      <li><a [routerLink]="['/order']" class="active">Purchased products</a></li>
+      <li><a [routerLink]="['/cart']">Cart</a></li>
+      <li><a [routerLink]="['/security']">Login and security</a></li>
+      <li><a [routerLink]="['/contact']" >Contact details</a></li>
+      <li><a [routerLink]="['/favorite']">Favourites</a></li>
+      <li><a [routerLink]="['/cart']">Log out</a></li>
+  </ul>
+  </div>
+  <div class="content">
+    <h2>Purchased products</h2>
 
-
-     <!-- Main Content -->
-     <div id="main-content">
-        <div class="sidebar">
-          <p class="user-name">Sebastian</p>
-          <p class="user-email">sebyghenciu5&#64;gmail.com</p>
-          <ul class="menu">
-            <li>Comenzile mele</li>
-            <li>Produse cumpărate</li>
-            <li>Produse returnate</li>
-            <li>Logare și securitate</li>
-            <li>Date de contact</li>
-            <li>Cardul clientului</li>
-            <li>Deconectați-vă</li>
-          </ul>
-        </div>
-        <div class="content">
-          <h2>Produse cumpărate</h2>
-          <div class="order-group">
-            <p class="order-date">30.05.2024 (760404305)</p>
-            <div class="product">
-              <img src="img/bentley.jpg" alt="Bentley For Men Intense" />
-              <div class="product-details">
-                <p class="product-name">Bentley <span class="product-subname">For Men Intense</span></p>
-                <p class="product-type">Eau de Parfum pentru bărbați 100 ml</p>
-              </div>
-              <div class="product-price">
-                <select class="quantity">
-                  <option value="1">1</option>
-                </select>
-                <span>135 RON</span>
-                <button class="cart-btn">În coș</button>
-              </div>
-            </div>
-            <div class="product">
-              <img src="img/valentino.jpg" alt="Valentino Born In Roma Intense Uomo" />
-              <div class="product-details">
-                <p class="product-name">Valentino <span class="product-subname">Born In Roma Intense Uomo</span></p>
-                <p class="product-type">Eau de Parfum pentru bărbați 50 ml</p>
-              </div>
-              <div class="product-price">
-                <select class="quantity">
-                  <option value="1">1</option>
-                </select>
-                <span>420 RON</span>
-                <button class="cart-btn">În coș</button>
-              </div>
-            </div>
-          </div>
-          <div class="order-group">
-            <p class="order-date">23.04.2024 (760114855)</p>
-            <div class="product">
-              <img src="img/versace_eros_flame.jpg" alt="Versace Eros Flame" />
-              <div class="product-details">
-                <p class="product-name">Versace <span class="product-subname">Eros Flame</span></p>
-                <p class="product-type">Eau de Parfum pentru bărbați 100 ml</p>
-              </div>
-              <div class="product-price">
-                <select class="quantity">
-                  <option value="1">1</option>
-                </select>
-                <span>358 RON</span>
-                <button class="cart-btn">În coș</button>
-              </div>
-            </div>
-          </div>
-          <div class="order-group">
-            <p class="order-date">23.04.2024 (760114046)</p>
-            <div class="product">
-              <img src="img/versace_eros.jpg" alt="Versace Eros" />
-              <div class="product-details">
-                <p class="product-name">Versace <span class="product-subname">Eros</span></p>
-                <p class="product-type">Eau de Parfum pentru bărbați 100 ml</p>
-              </div>
-              <div class="product-price">
-                <select class="quantity">
-                  <option value="1">1</option>
-                </select>
-                <span>415 RON</span>
-                <button class="cart-btn">În coș</button>
-            </div>
-        </div>
-        </div>
-       </div>
+    <div class="order">
+      <a href="/order-details" class="order-link">Versace Eros Flame</a>
+      <span class="order-price">350 RON</span>
     </div>
-      
+    
+    <div class="order">
+      <a href="/order-details" class="order-link">Versace Eros</a>
+      <span class="order-price">400 RON</span>
+    </div>
 
+    <div class="order">
+      <a href="/order-details" class="order-link">Versace Eros Energy</a>
+      <span class="order-price">400 RON</span>
+    </div>
 
+    <div class="order">
+      <a href="/order-details" class="order-link">Versace Blue Jeans</a>
+      <span class="order-price">400 RON</span>
+    </div>
+    
+    <div class="order">
+      <a href="/order-details" class="order-link">Versace Blue Dylan</a>
+      <span class="order-price">400 RON</span>
+    </div>
+    
+  </div>
+</div>

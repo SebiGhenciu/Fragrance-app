@@ -1,50 +1,34 @@
 <!-- Main Content -->
 <div id="main-content">
   <div class="sidebar">
-    <p class="user-name">Sebastian</p>
-    <p class="user-email">sebyghenciu5&#64;gmail.com</p>
-    <ul class="menu">
-      <li>Comenzile mele</li>
-      <li>Produse cumpărate</li>
-      <li>Produse returnate</li>
-      <li>Logare și securitate</li>
-      <li>Date de contact</li>
-      <li>Cardul clientului</li>
-      <li>Deconectați-vă</li>
-    </ul>
+    <p class="user-name">My account</p>
+    <br>
+    <ul>
+      <li><a [routerLink]="['/account']" class="active">My orders</a></li>
+      <li><a [routerLink]="['/order']">Purchased products</a></li>
+      <li><a [routerLink]="['/cart']">Cart</a></li>
+      <li><a [routerLink]="['/security']">Login and security</a></li>
+      <li><a [routerLink]="['/contact']" >Contact details</a></li>
+      <li><a [routerLink]="['/favorite']">Favourites</a></li>
+      <li><a [routerLink]="['/cart']">Log out</a></li>
+  </ul>
   </div>
   <div class="content">
-    <h2>Comenzile mele</h2>
-    <h3>Comenzi anterioare</h3>
+
+    <h2>My orders</h2>
+    <h3>Previous orders</h3>
+    
     <div class="order">
       <a href="#">760404305</a>
-      <span>Ridicată | 30.05.2024 | 443 RON</span>
-      <button class="return-btn">Returnat/reclamat</button>
+      <span>Picked up | 01.01.2024 | 500 RON</span>
+      <button class="return-btn">Returned/complained</button>
     </div>
+
     <div class="order">
       <a href="#">760114855</a>
-      <span>Ridicată | 23.04.2024 | 258 RON</span>
-      <button class="return-btn">Returnat/reclamat</button>
+      <span>Picked up | 01.01.2024 | 500 RON</span>
+      <button class="return-btn">Returned/complained</button>
     </div>
-    <div class="order">
-      <a href="#">760114046</a>
-      <span>Ridicată | 23.04.2024 | 340 RON</span>
-      <button class="return-btn">Returnat/reclamat</button>
-    </div>
-    <div class="order">
-      <a href="#">719827921</a>
-      <span>Ridicată | 18.03.2024 | 72 RON</span>
-      <button class="return-btn">Returnat/reclamat</button>
-    </div>
-    <div class="order">
-      <a href="#">719595078</a>
-      <span>Ridicată | 20.02.2024 | 217 RON</span>
-      <button class="return-btn">Reclamație produse</button>
-    </div>
-    <div class="order">
-      <a href="#">719531741</a>
-      <span>Livrată | 13.02.2024 | 299 RON</span>
-      <button class="return-btn">Reclamație produse</button>
-    </div>
+    
   </div>
 </div>

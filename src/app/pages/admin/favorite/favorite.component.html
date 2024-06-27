@@ -1,49 +1,65 @@
-<!-- Main Content -->
-<div id="main-content">
-  <div class="perfume-item">
-    <img src="link_to_image1" alt="Jean Paul Gaultier Le Male Le Parfum" />
-    <div class="details">
-      <p class="brand">Jean Paul Gaultier</p>
-      <p class="name">Le Male Le Parfum</p>
-      <p class="type">Eau de Parfum pentru bărbați</p>
-      <p class="volume">75 ml</p>
-      <p class="price">380 RON</p>
+<div class="main-content">
+    <div class="sidebar">
+        <p>My Account</p>
+        <br>
+        <ul>
+            <li><a [routerLink]="['/account']">My orders</a></li>
+            <li><a [routerLink]="['/order']">Purchased products</a></li>
+            <li><a [routerLink]="['/cart']">Cart</a></li>
+            <li><a [routerLink]="['/security']">Login and security</a></li>
+            <li><a [routerLink]="['/contact']" >Contact details</a></li>
+            <li><a [routerLink]="['/favorite']" class="active">Favourites</a></li>
+            <li><a [routerLink]="['/cart']">Log out</a></li>
+        </ul>
     </div>
-  </div>
 
-  <div class="perfume-item">
-    <img src="link_to_image2" alt="Jean Paul Gaultier Le Male Elixir" />
-    <div class="details">
-      <p class="brand">Jean Paul Gaultier</p>
-      <p class="name">Le Male Elixir</p>
-      <p class="type">Parfum pentru bărbați</p>
-      <p class="volume">125 ml</p>
-      <p class="price">529 RON</p>
-    </div>
-  </div>
+    <!-- Content -->
+    <div class="content">
+        <h2>Perfumes</h2>
 
-  <div class="perfume-item">
-    <img src="link_to_image3" alt="GIVENCHY Gentleman Givenchy" />
-    <div class="details">
-      <p class="brand">GIVENCHY</p>
-      <p class="name">Gentleman Givenchy</p>
-      <p class="type">Eau de Parfum pentru bărbați</p>
-      <p class="volume">100 ml</p>
-      <p class="price">488 RON</p>
-    </div>
-  </div>
+        <!-- Perfume Items -->
+        <div class="perfume-item">
+            <img src="link_to_image1" alt="Jean Paul Gaultier Le Male Le Parfum" />
+            <div class="details">
+                <p class="brand">Jean Paul Gaultier</p>
+                <p class="name">Le Male Le Parfum</p>
+                <p class="type">Eau de Parfum pentru bărbați</p>
+                <p class="volume">75 ml</p>
+                <p class="price">380 RON</p>
+            </div>
+        </div>
 
-  <div class="perfume-item">
-    <img
-      src="link_to_image4"
-      alt="Maison Margiela REPLICA Fall / Winter Discovery Set"
-    />
-    <div class="details">
-      <p class="brand">Maison Margiela</p>
-      <p class="name">REPLICA Fall / Winter Discovery Set</p>
-      <p class="type">Set cadou unisex</p>
-      <p class="volume">3x10 ml</p>
-      <p class="price">253 RON</p>
+        <div class="perfume-item">
+            <img src="link_to_image2" alt="Jean Paul Gaultier Le Male Elixir" />
+            <div class="details">
+                <p class="brand">Jean Paul Gaultier</p>
+                <p class="name">Le Male Elixir</p>
+                <p class="type">Parfum pentru bărbați</p>
+                <p class="volume">125 ml</p>
+                <p class="price">529 RON</p>
+            </div>
+        </div>
+
+        <div class="perfume-item">
+            <img src="link_to_image3" alt="GIVENCHY Gentleman Givenchy" />
+            <div class="details">
+                <p class="brand">GIVENCHY</p>
+                <p class="name">Gentleman Givenchy</p>
+                <p class="type">Eau de Parfum pentru bărbați</p>
+                <p class="volume">100 ml</p>
+                <p class="price">488 RON</p>
+            </div>
+        </div>
+
+        <div class="perfume-item">
+            <img src="link_to_image4" alt="Maison Margiela REPLICA Fall / Winter Discovery Set" />
+            <div class="details">
+                <p class="brand">Maison Margiela</p>
+                <p class="name">REPLICA Fall / Winter Discovery Set</p>
+                <p class="type">Set cadou unisex</p>
+                <p class="volume">3x10 ml</p>
+                <p class="price">253 RON</p>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

@@ -59,11 +59,14 @@ export class PerfumeGridComponent {
 
   private searchByFilters() {
     if (this.perfumeType == PerfumeType.All) {
+      console.log(this.perfumeNote )
       this.filtredPerfumes = this.perfumes.filter(
         (perfume) => perfume.sex == this.perfumesSex
       );
     }
     if (this.perfumeType && this.perfumesSex) {
+      console.log(this.perfumesSex)
+      console.log(this.perfumeNote)
       this.filtredPerfumes = this.perfumes.filter(
         (perfume) =>
           perfume.sex == this.perfumesSex && perfume.type == this.perfumeType

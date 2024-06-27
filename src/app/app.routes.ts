@@ -17,6 +17,9 @@ import { MainPageComponent } from './pages/website/main-page/main-page.component
 import { PersonalLiftComponent } from './pages/website/personal-lift/personal-lift.component';
 import { NavBarComponent } from './pages/website/nav-bar/nav-bar.component';
 import { PerfumePageComponent } from './pages/perfume-page/perfume-page.component';
+import { ComplaintsComponent } from './pages/admin/complaints/complaints.component';
+import { TCComponent } from './pages/admin/tc/tc.component';
+import { PaymentComponent } from './pages/admin/payment/payment.component';
 
 export const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -35,6 +38,9 @@ export const routes: Routes = [
   { path: 'perfume/:sex/:perfumeType/:note', component: PerfumeGridComponent },
   { path: 'original-products', component: OriginalProductsComponent },
   { path: 'transport', component: TransportComponent },
+  { path: 'tc', component: TCComponent },
+  { path: 'payment', component: PaymentComponent },
   { path: 'perfume/:name', component: PerfumeGridComponent },
+  { path: 'complaints', component: ComplaintsComponent },
   { path: 'perfume-page/:perfumeId', component: PerfumePageComponent },
 ];

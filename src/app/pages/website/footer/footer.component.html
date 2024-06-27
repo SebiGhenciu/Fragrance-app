@@ -49,23 +49,16 @@
       <div class="footer-column">
         <h2>Important links</h2>
         <ul>
-          <li><a href="#">Terms and conditions</a></li>
-          <li><a href="#">How can I pay?</a></li>
+          <li><a [routerLink]="['/tc']">Terms and conditions</a></li>
+          <li><a [routerLink]="['/payment']">How can I pay?</a></li>
           <li><a [routerLink]="['/transport']">Delivery methods</a></li>
-          <li><a href="#">Claims and complaints</a></li>
+          <li><a [routerLink]="['/complaints']">Claims and complaints</a></li>
           <li><a [routerLink]="['/contact']">Contact</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <div class="footer-trust">
-        <a href="https://www.trustpilot.com/"
-          ><img src="/assets/trustpilot.png" alt="Trustpilot"
-        /></a>
-        <a href="https://anpc.ro/"><img src="/assets/anpc.png" alt="ANPC" /></a>
-      </div>
-
       <div class="footer-app">
         <p>Download the mobile app</p>
         <a href="https://play.google.com/store/games?device=windows"

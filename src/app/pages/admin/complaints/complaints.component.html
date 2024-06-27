@@ -1,0 +1,42 @@
+<div class="main-content">
+    <h2>Want to ask us something? Write to us here, please.</h2>
+    <form class="contact-form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Mobile/Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="contact-method">How can we answer back?<span>(optional)</span></label>
+            <select id="contact-method" name="contact-method">
+                <option value="email">Email</option>
+                <option value="phone">Phone number</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="order-number">Order number <span>(optional)</span></label>
+            <input type="text" id="order-number" name="order-number">
+        </div>
+        <div class="form-group">
+            <label for="help-topic">How can we help you?</label>
+            <select id="help-topic" name="help-topic">
+                <option value="existing-order">Question about / modification of an existing order</option>
+                <option value="new-order">Question about a new order</option>
+                <option value="product-info">Question about a product</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="message">Please type your question here</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>

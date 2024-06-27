@@ -1,33 +1,17 @@
 <mat-card class="perfume-container">
-  <mat-card-header>
-      <mat-card-title>{{perfume.brand}}</mat-card-title>
-  </mat-card-header>
+  <a [routerLink]="['/perfume-page', perfume.id]">
   <img mat-card-image class="perfume-image" [src]="perfume.images[0]" alt="Perfume Image">
-  <mat-card-content>
-    <!-- [routerLink]="['/perfume', perfume.id] -->
-      <h2>{{perfume.name}}</h2>
-      <p>{{perfume.price}} RON for {{perfume.quantity}} ML</p>
-      <a class="fragrantica-link" [href]='perfume.fragranticaLink'>Check in on Fragrantica</a>
-  </mat-card-content>
-  <mat-card-actions>
-      <button (click)="addItemToCart(perfume)" mat-button>Add to Cart</button>
-  </mat-card-actions>
-</mat-card>
-
-<!-- 
-<mat-card class="perfume-container">
+  </a>
   <mat-card-header>
-    <mat-card-title>{{perfume.name}}</mat-card-title>
+    <mat-card-title>{{perfume.brand}}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image [src]="perfume.images[0]" alt="Perfume Image">
-  <a [href] ='perfume.fragranticaLink'>Link</a>
   <mat-card-content>
-  
+      <h2>{{perfume.name}}</h2>
+      <p>Perfume per {{perfume.quantity}} ML</p>
+      <p class = "bold-price">At the price of {{perfume.price}} Lei</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+      <button (click)="addItemToCart(perfume)" mat-stroked-button>Add to Cart</button>
+      <button mat-stroked-button><a class="fragrantica-link" [href]='perfume.fragranticaLink'>Fragrantica</a></button>
   </mat-card-actions>
 </mat-card>
-
--->

@@ -1,0 +1,25 @@
+<div class="product-page">
+    <div class="product-images">
+        <img mat-card-image class="perfume-image" [src]="perfume.images[0]" alt="Perfume Image">
+    </div>
+    <div class="product-details">
+        <h1>{{perfume.name}} </h1>
+        <h3>{{perfume.brand}}</h3>
+        <p class="price"><span class="discounted-price"> {{perfume.price}} RON</span></p>
+        <h3 class="availability">In stoc for 300 ML <!-- {{perfume.quantity}} --></h3>
+        <button mat-stroked-button>Add to Cart</button> <!-- (click)="addItemToCart(perfume)" -->
+
+        <p class="gift"> Description </p>
+        <p> Începeți să explorați cu ajutorul cutiilor Discovery Box, pline de eșantioane. 
+            Nu trebuie decât să faceți cumpărături de peste 300 RON și vă puteți alege cadou o 
+            cutie Discovery Box în coș. Ofertă valabilă în limita stocului disponibil. <!-- {{perfume.description}} --></p>
+        <p class="gift"> Fragrantica - Your Online Destination for All Things Fragrance</p>
+        <p> Discover the world of perfumes with Fragrantica, a comprehensive online resource,
+            magazine, and community dedicated to fragrance enthusiasts. We keep our readers in
+            the know about the latest perfume releases, renowned fragrances, and hidden aromatic
+            treasures. Embark on a sensory journey through time and space, guided by the captivating
+            scents that shape our experiences. Explore their fascinating history, uncover exotic
+            locales, and marvel at the wonders of nature with fellow perfume aficionados.</p>
+    </div>
+</div>
+

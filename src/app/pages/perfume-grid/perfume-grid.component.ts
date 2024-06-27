@@ -24,6 +24,9 @@ export class PerfumeGridComponent {
   get PerfumeType() {
     return PerfumeType;
   }
+  get Note() {
+    return Note;
+  }
 
   perfumes: Perfume[] = [];
   filtredPerfumes: Perfume[] = [];
@@ -66,7 +69,8 @@ export class PerfumeGridComponent {
           perfume.sex == this.perfumesSex && perfume.type == this.perfumeType
       );
     }
-    if (this.perfumesSex && this.perfumeNote) {
+    if (this.perfumeNote !== Note.Undefined) {
+      console.log(this.perfumeNote)
       this.filtredPerfumes = this.perfumes.filter(
         (perfume) =>
           perfume.sex == this.perfumesSex &&

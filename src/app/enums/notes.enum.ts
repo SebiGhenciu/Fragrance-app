@@ -3,5 +3,6 @@ export enum Note {
     Floral,
     Fruity,
     Marine,
-    Green
+    Green,
+    Undefined
 }

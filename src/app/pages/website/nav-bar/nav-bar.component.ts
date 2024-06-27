@@ -20,7 +20,6 @@ export class NavBarComponent {
   get PerfumeType() {
     return PerfumeType;
   }
-
   get Note() {
     return Note;
   }

@@ -1,213 +1,281 @@
-  <!-- Nav Bar -->
-  <nav class="navbar">
-     <!-- Search bar and other -->
-    <div class="navbar-container">
-      <a [routerLink]="['/main-page']" class="logo">Scent Serenity</a>
-      <div class="search-account-cart">
-        <div class="search-bar">
-          <input type="text" placeholder="Search a fragrance..." [(ngModel)]="perfumeName"/>
-          <button (click)="searchPerfumes()"><mat-icon>search</mat-icon></button>
-        </div>
-        <div class="account-cart">
-          <a [routerLink]="['/login']"><i class="fas fa-user"></i> Sebastian</a>
-          <a [routerLink]="['/contact']"
-            ><i class="fas fa-heart"></i> My Account
-          </a>
-          <a [routerLink]="['/cart']"
-            ><i class="fas fa-shopping-cart"></i> Shopping cart</a
-          >
-        </div>
+<!-- Nav Bar -->
+<nav class="navbar">
+  <!-- Search bar and other -->
+  <div class="navbar-container">
+    <a [routerLink]="['/main-page']" class="logo">Scent Serenity</a>
+    <div class="search-account-cart">
+      <div class="search-bar">
+        <input
+          type="text"
+          placeholder="Search a fragrance..."
+          [(ngModel)]="perfumeName"
+        />
+        <button (click)="searchPerfumes()"><mat-icon>search</mat-icon></button>
+      </div>
+      <div class="account-cart">
+        <a [routerLink]="['/login']"><i class="fas fa-user"></i> Login </a>
+        <a [routerLink]="['/contact']"
+          ><i class="fas fa-heart"></i> My Account
+        </a>
+        <a [routerLink]="['/cart']"
+          ><i class="fas fa-shopping-cart"></i> Shopping cart</a
+        >
       </div>
     </div>
+  </div>
 
-    <div class="navbar-container">
-       <!-- Drop down  -->
-      <ul class="nav-links">
-        <!-- Promotions -->
-        <li><a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.All, null]">Promotions</a></li>
-        <!-- Women -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.All, null]"
-            >Women Fragrance</a
-          >
-          <div class="dropdown-content">
-            <div class="dropdown-column">
-              <h4>Women Fragrance</h4>
-              <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.EDP]"
-                >Eau de parfum</a
-              >
-              <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.EDT]"
-                >Eau de toilette</a
-              >
-              <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.Extract]"
-                >Body Mist</a
-              >
-            </div>
-            <div class="dropdown-column">
-              <h4>Popular brands</h4>
+  <div class="navbar-container">
+    <!-- Drop down  -->
+    <ul class="nav-links">
+      <!-- Promotions -->
+      <li>
+        <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.All, Note.Undefined]"
+          >Promotions</a
+        >
+      </li>
+      <!-- Women -->
+      <li class="dropdown">
+        <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.All, null]"
+          >Women Fragrance</a
+        >
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>Women Fragrance</h4>
+            <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.EDP, Note.Undefined]"
+              >Eau de parfum</a
+            >
+            <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.EDT, Note.Undefined]"
+              >Eau de toilette</a
+            >
+            <a
+              [routerLink]="[
+                '/perfume',
+                Sex.Feminine,
+                PerfumeType.Extract,
+                Note.Undefined
+              ]"
+              >Body Mist</a
+            >
+          </div>
+          <div class="dropdown-column">
+            <h4>Popular brands</h4>
 
-              <a [routerLink]="['/perfume', Sex.Feminine,null, Note.Woody]">Woody</a>
-              <a [routerLink]="['/perfume', Sex.Feminine,null, Note.Floral]"
-                >Floral</a
-              >
-              <a [routerLink]="['/perfume', Sex.Feminine,null, Note.Fruity]"
-                >Fruity</a
-              >
-              <a [routerLink]="['/perfume', Sex.Feminine,null, Note.Marine]"
-                >Marine</a
-              >
-              <a [routerLink]="['/perfume', Sex.Feminine,null, Note.Green]">Green</a>
-            </div>
+            <a [routerLink]="['/perfume', Sex.Feminine, null, Note.Woody]"
+              >Woody</a
+            >
+            <a [routerLink]="['/perfume', Sex.Feminine, null, Note.Floral]"
+              >Floral</a
+            >
+            <a [routerLink]="['/perfume', Sex.Feminine, null, Note.Fruity]"
+              >Fruity</a
+            >
+            <a [routerLink]="['/perfume', Sex.Feminine, null, Note.Marine]"
+              >Marine</a
+            >
+            <a [routerLink]="['/perfume', Sex.Feminine, null, Note.Green]"
+              >Green</a
+            >
           </div>
-        </li>
-        <!-- Men -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.All,null]">Men Fragrance</a>
-          <div class="dropdown-content">
-            <div class="dropdown-column">
-              <h4>Men Fragrance</h4>
-              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDC,null]"
-                >Eau de cologne</a
-              >
-              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDP,null]"
-                >Eau de parfum</a
-              >
-              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDT,null]"
-                >Eau de toilette</a
-              >
-            </div>
-            <div class="dropdown-column">
-              <h4>Popular brands</h4>
-              <a [routerLink]="['/perfume',Sex.Masculine,Note.Woody]">Woody</a>
-              <a [routerLink]="['/perfume',Sex.Masculine,Note.Floral]">Floral</a>
-              <a [routerLink]="['/perfume',Sex.Masculine,Note.Fruity]">Fruity</a>
-              <a [routerLink]="['/perfume',Sex.Masculine,Note.Marine]">Marine</a>
-              <a [routerLink]="['/perfume',Sex.Masculine,Note.Green]">Green</a>
-            </div>
+        </div>
+      </li>
+      <!-- Men -->
+      <li class="dropdown">
+        <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.All, null]"
+          >Men Fragrance</a
+        >
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>Men Fragrance</h4>
+            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDC, null]"
+              >Eau de cologne</a
+            >
+            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDP, null]"
+              >Eau de parfum</a
+            >
+            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDT, null]"
+              >Eau de toilette</a
+            >
           </div>
-        </li>
-        <!-- Unisex -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume', Sex.Unisex]">Unisex Fragrance</a>
-          <div class="dropdown-content">
-            <div class="dropdown-column">
-              <h4>Unisex Fragrance</h4>
-              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Extract]"
-                >Perfume extract</a
-              >
-              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDP]"
-                >Eau de parfum</a
-              >
-              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDT]"
-                >Eau de toilette</a
-              >
-            </div>
-            <div class="dropdown-column">
-              <h4>Popular brands</h4>
-              <!-- 
-              <a [routerLink]="['/perfume',Sex.Feminine,Note.Woody]">Woody</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,Note.Floral]">Floral</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,Note.Fruity]">Fruity</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,Note.Marine]">Marine</a>
-              <a [routerLink]="['/perfume',Sex.Feminine,Note.Green]">Green</a> -->
-            </div>
+          <div class="dropdown-column">
+            <h4>Popular brands</h4>
+            <a [routerLink]="['/perfume', Sex.Masculine, null, Note.Woody]"
+              >Woody</a
+            >
+            <a [routerLink]="['/perfume', Sex.Masculine, null, Note.Floral]"
+              >Floral</a
+            >
+            <a [routerLink]="['/perfume', Sex.Masculine, null, Note.Fruity]"
+              >Fruity</a
+            >
+            <a [routerLink]="['/perfume', Sex.Masculine, null, Note.Marine]"
+              >Marine</a
+            >
+            <a [routerLink]="['/perfume', Sex.Masculine, null, Note.Green]"
+              >Green</a
+            >
           </div>
-        </li>
-        <!-- Niche -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume', Sex.Unisex]">Niche Fragrance</a>
-          <div class="dropdown-content">
-            <div class="dropdown-column">
-              <h4>Niche Fragrance</h4>
-              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Extract]"
-                >Parfum extract</a
-              >
-              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Perfume]"
-                >Parfum</a
-              >
-              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Artisan]"
-                >Artisan</a
-              >
-            </div>
-            <div class="dropdown-column">
-              <h4>Popular brands</h4>
-              <!-- 
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Woody]">Woody</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Floral]">Floral</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Fruity]">Fruity</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Marine]">Marine</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Green]">Green</a> -->
-            </div>
+        </div>
+      </li>
+      <!-- Unisex -->
+      <li class="dropdown">
+        <a [routerLink]="['/perfume', Sex.Unisex]">Unisex Fragrance</a>
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>Unisex Fragrance</h4>
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Extract, null]"
+              >Perfume extract</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDP, null]"
+              >Eau de parfum</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDT, null]"
+              >Eau de toilette</a
+            >
           </div>
-        </li>
-        <!-- Perfume Sets -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume', PerfumeType.BM]">Perfumes Sets</a>
-          <div class="dropdown-content">
-            <div class="dropdown-column">
-              <h4>Perfumes Sets</h4>
-              <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.BM]"
-                >Masculine Sets</a
-              >
-              <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.BM]"
-                >Feminine Sets</a
-              >
-              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.BM]"
-                >Unisex Sets</a
-              >
-            </div>
-            <div class="dropdown-column">
-              <h4>Popular brands</h4>
-              <!-- 
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Woody]">Woody</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Floral]">Floral</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Fruity]">Fruity</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Marine]">Marine</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Green]">Green</a> -->
-            </div>
+          <div class="dropdown-column">
+            <h4>Popular brands</h4>
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Woody]"
+              >Woody</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Floral]"
+              >Floral</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Fruity]"
+              >Fruity</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Marine]"
+              >Marine</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Green]"
+              >Green</a
+            >
           </div>
-        </li>
-        <!-- Refillable -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDP]"
-            >Refillable Perfumes</a
-          >
-          <div class="dropdown-content">
-            <div class="dropdown-column">
-              <h4>Refillable Perfumes</h4>
-              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Perfume]"
-                >Parfum</a
-              >
-              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDP]"
-                >Eau de parfum</a
-              >
-              <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Intense]"
-                >Eau de parfum intense</a
-              >
-            </div>
-            <div class="dropdown-column">
-              <h4>Popular brands</h4>
-              <!-- 
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Woody]">Woody</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Floral]">Floral</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Fruity]">Fruity</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Marine]">Marine</a>
-              <a [routerLink]="['/perfume',Sex.Unisex,Note.Green]">Green</a> -->
-            </div>
+        </div>
+      </li>
+      <!-- Niche -->
+      <li class="dropdown">
+        <a [routerLink]="['/perfume', Sex.Unisex]">Niche Fragrance</a>
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>Niche Fragrance</h4>
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Extract, null]"
+              >Parfum extract</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Perfume, null]"
+              >Parfum</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Artisan, null]"
+              >Artisan</a
+            >
           </div>
-        </li>
-        <!-- Decants -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.EDP]"
-            >Decants</a
-          >
-        </li>
-        <!-- Samples -->
-        <li class="dropdown">
-          <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.EDP]"
-            >Samples</a
-          >
-        </li>
-      </ul>
-    </div>
-  </nav>
+          <div class="dropdown-column">
+            <h4>Popular brands</h4>
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Woody]"
+              >Woody</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Floral]"
+              >Floral</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Fruity]"
+              >Fruity</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Marine]"
+              >Marine</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Green]"
+              >Green</a
+            >
+          </div>
+        </div>
+      </li>
+      <!-- Perfume Sets -->
+      <li class="dropdown">
+        <a [routerLink]="['/perfume', PerfumeType.BM]">Perfumes Sets</a>
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>Perfumes Sets</h4>
+            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.BM, null]"
+              >Masculine Sets</a
+            >
+            <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.BM, null]"
+              >Feminine Sets</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.BM, null]"
+              >Unisex Sets</a
+            >
+          </div>
+          <div class="dropdown-column">
+            <h4>Popular brands</h4>
+            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.BM, Note.Woody]"
+              >Woody</a
+            >
+            <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.BM, Note.Floral]"
+              >Floral</a
+            >
+            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.BM, Note.Woody]"
+              >Fruity</a
+            >
+            <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.BM, Note.Marine]"
+              >Marine</a
+            >
+            <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.BM, Note.Green]"
+              >Green</a
+            >
+          </div>
+        </div>
+      </li>
+      <!-- Refillable -->
+      <li class="dropdown">
+        <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.All, null]"
+          >Refillable Perfumes</a
+        >
+        <div class="dropdown-content">
+          <div class="dropdown-column">
+            <h4>Refillable Perfumes</h4>
+            <a
+              [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Perfume, null]"
+              >Parfum</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, PerfumeType.EDP, null]"
+              >Eau de parfum</a
+            >
+            <a
+              [routerLink]="['/perfume', Sex.Unisex, PerfumeType.Intense, null]"
+              >Eau de parfum intense</a
+            >
+          </div>
+          <div class="dropdown-column">
+            <h4>Popular brands</h4>
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Woody]"
+              >Woody</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Floral]"
+              >Floral</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Fruity]"
+              >Fruity</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Marine]"
+              >Marine</a
+            >
+            <a [routerLink]="['/perfume', Sex.Unisex, null, Note.Green]"
+              >Green</a
+            >
+          </div>
+        </div>
+      </li>
+      <!-- Decants -->
+      <li class="dropdown">
+        <a [routerLink]="['/perfume', Sex.Masculine, PerfumeType.All, null]"
+          >Decants</a
+        >
+      </li>
+      <!-- Samples -->
+      <li class="dropdown">
+        <a [routerLink]="['/perfume', Sex.Feminine, PerfumeType.All, null]"
+          >Samples</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

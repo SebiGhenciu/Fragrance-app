@@ -16,10 +16,10 @@ import { GdprComponent } from './pages/website/gdpr/gdpr.component';
 import { MainPageComponent } from './pages/website/main-page/main-page.component';
 import { PersonalLiftComponent } from './pages/website/personal-lift/personal-lift.component';
 import { NavBarComponent } from './pages/website/nav-bar/nav-bar.component';
+import { PerfumePageComponent } from './pages/perfume-page/perfume-page.component';
 
 export const routes: Routes = [
   { path: '', component: MainPageComponent },
-
   { path: 'login', component: LoginComponent },
   { path: 'main-page', component: MainPageComponent },
   { path: 'about-us', component: AboutUsComponent },
@@ -36,7 +36,5 @@ export const routes: Routes = [
   { path: 'original-products', component: OriginalProductsComponent },
   { path: 'transport', component: TransportComponent },
   { path: 'perfume/:name', component: PerfumeGridComponent },
-
+  { path: 'perfume-page/:perfumeId', component: PerfumePageComponent },
 ];
-
-/* { path: 'perfume/:perfumeType', component: PerfumeGridComponent, }, */

@@ -27,9 +27,7 @@
       <div class="option">
         <label
         ><mat-checkbox (change)="checkWrap($event.checked)" > 
-          Împachetați cadou anumite produse sau toată
-          comanda
-
+          Delivery
         </mat-checkbox> 
         </label
         >
@@ -37,17 +35,17 @@
       </div>
       <div class="option">
       <label><mat-checkbox (change)="checkEcoWrap($event.checked)" > 
-        Ambalare ecologică
+        Ecological packaging
         </mat-checkbox>
         </label>
       <span class="option-price">5 RON</span>
     </div>
     <div class="option">
-      <label><mat-checkbox (change)="checkWaranty($event.checked)" >  Asigurare colet </mat-checkbox>></label>
+      <label><mat-checkbox (change)="checkWaranty($event.checked)">  Gift wrapping </mat-checkbox></label>
       <span class="option-price">4 RON</span>
     </div>
   </div>
 
-  <div class="total-price">Pret total inclusiv TVA: {{totalPrice}} RON</div>
+  <div class="total-price">Total price including VAT: {{totalPrice}} RON</div>
 
 </div>

@@ -2,79 +2,64 @@
   display: flex;
   font-family: Arial, sans-serif;
 }
-
 .sidebar {
   width: 20%;
   padding: 20px;
   border-right: 1px solid #ddd;
 }
-
 .sidebar .user-name {
   font-weight: bold;
 }
-
 .sidebar .user-email {
   color: #666;
   margin-bottom: 20px;
 }
-
 .sidebar ul {
   list-style: none;
   padding: 0;
 }
-
 .sidebar ul li {
   margin: 10px 0;
 }
-
 .sidebar ul li a {
   text-decoration: none;
   color: #000;
 }
-
 .sidebar ul li a.active {
   font-weight: bold;
   color: #007bff;
 }
-
 .content {
   width: 80%;
   padding: 20px;
 }
-
 h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }
-
 .perfume-item {
   display: flex;
   margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
 }
-
 .perfume-item img {
   width: 150px;
   height: 150px;
   object-fit: cover;
   margin-right: 20px;
 }
-
 .perfume-item .details {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .perfume-item .details p {
   margin: 5px 0;
 }
-
 .perfume-item .details .brand {
   font-weight: bold;
 }
-
 .perfume-item .details .price {
   color: #007bff;
   font-weight: bold;

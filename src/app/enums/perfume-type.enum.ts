@@ -8,5 +8,4 @@ export enum PerfumeType {
     EDC,
     BM,
     All,
-    Undefined
 }

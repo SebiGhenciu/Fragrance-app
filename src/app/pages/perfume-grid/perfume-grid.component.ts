@@ -43,8 +43,9 @@ export class PerfumeGridComponent {
       this.perfumes = perfumes;
 
       if (this.perfumeName) {
+        console.log("test")
         this.searchByName();
-      }
+      } else
       this.searchByFilters();
     });
     this.route.params.pipe(takeUntilDestroyed()).subscribe((params) => {
@@ -76,7 +77,7 @@ export class PerfumeGridComponent {
           perfume.sex == this.perfumesSex &&
           perfume.notes.some((note) => note == this.perfumeNote)
       );
-    }
+    } 
   }
 
   private searchByName() {

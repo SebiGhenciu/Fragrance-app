@@ -65,15 +65,12 @@ export class PerfumeGridComponent {
       );
     }
     if (this.perfumeType && this.perfumesSex) {
-      console.log(this.perfumesSex)
-      console.log(this.perfumeNote)
       this.filtredPerfumes = this.perfumes.filter(
         (perfume) =>
           perfume.sex == this.perfumesSex && perfume.type == this.perfumeType
       );
     }
     if (this.perfumeNote !== Note.Undefined) {
-      console.log(this.perfumeNote)
       this.filtredPerfumes = this.perfumes.filter(
         (perfume) =>
           perfume.sex == this.perfumesSex &&
